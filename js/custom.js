@@ -189,21 +189,21 @@ jQuery(function($){
        var skipSlider = document.getElementById('aa-sqrfeet-range');
         noUiSlider.create(skipSlider, {
             range: {
-              'min': 0,
-              '10%': 100,
-              '20%': 200,
-              '30%': 300,
-              '40%': 400,
-              '50%': 500,
-              '60%': 600,
-              '70%': 700,
-              '80%': 800,
-              '90%': 900,
-              'max': 1000
+              'min': 1,
+              '10%': 2,
+              '20%': 3,
+              '30%': 4,
+              '40%': 5,
+              '50%': 6,
+              '60%': 7,
+              '70%': 8,
+              '80%': 9,
+              '90%': 10,
+              'max': 11
             },
             snap: true,
             connect: true,
-            start: [200, 700]
+            start: [1, 10]
         });
         // for value print
         var skipValues = [
@@ -220,21 +220,21 @@ jQuery(function($){
         var skipSlider2 = document.getElementById('aa-price-range');
         noUiSlider.create(skipSlider2, {
             range: {
-                'min': 0,
-                '10%': 100,
-                '20%': 200,
-                '30%': 300,
-                '40%': 400,
-                '50%': 500,
-                '60%': 600,
-                '70%': 700,
-                '80%': 800,
-                '90%': 900,
-                'max': 1000
+                'min': 10000,
+                '10%': 20000,
+                '20%': 30000,
+                '30%': 40000,
+                '40%': 50000,
+                '50%': 60000,
+                '60%': 70000,
+                '70%': 80000,
+                '80%': 90000,
+                '90%': 100000,
+                'max': 110000
             },
             snap: true,
             connect: true,
-            start: [200, 700]
+            start: [20000, 70000]
         });
         // for value print
         var skipValues2 = [
