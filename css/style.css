@@ -564,6 +564,8 @@ img {
   float: left;
   width: 100%;
 }
+
+
 #aa-advance-search .aa-advance-search-area {
   background-color: rgba(221, 221, 221, 0.8);
   border-radius: 10px 10px 0 0;
@@ -574,7 +576,28 @@ img {
   padding: 25px 20px;
   position: relative;
   width: 100%;
+
+  
 }
+
+.search-input .autocom-box{
+  opacity: 0;
+  pointer-events: none;
+}
+/* Location Search Box */
+#aa-advance-search .aa-advance-search-area .autocom-box li{
+  list-style: none;
+  padding: 8px 12px;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+  display: none;
+}
+
+#aa-advance-search .aa-advance-search-area .autocom-box li:hover{
+  background-color: #efefef;
+}
+
 #aa-advance-search .aa-advance-search-area .aa-advance-search-top {
   display: inline;
   float: left;

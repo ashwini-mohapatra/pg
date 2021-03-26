@@ -23,8 +23,11 @@
     <link id="switcher" href="css/theme-color/default-theme.css" rel="stylesheet">     
 
     <!-- Main style sheet -->
-    <link href="css/style.css" rel="stylesheet">    
-
+    <link href="css/style.css" rel="stylesheet"> 
+    
+    <!-- Location Search Bar -->
+    <!-- <script src="js/suggestions.js"></script> -->
+    <script src="js/script_loc.js"></script>
    
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>    
@@ -226,7 +229,17 @@
               <div class="row">
                 <div class="col-md-4">
                   <div class="aa-single-advance-search">
-                    <input type="text" placeholder="Type Your Location">
+                    <div class="wrapper">
+                      <div class="search-input">
+                        <input class="input" type="text" placeholder="Type Your Location">
+                        <div class="autocom-box">
+                          <li>Mumbai, Maharashtra</li>
+                          <li>Gurgaon, Delhi</li>
+                          <li>Baga Beach, Goa</li>
+                        </div>
+                        <!-- <div class="searchIcon"><i class="fas fa-search"></i></div> -->
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="col-md-2">
