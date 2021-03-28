@@ -7,7 +7,7 @@
     <title>FindYourPG | Home</title>
     
     <!-- Favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
 
     <!-- Font awesome -->
     <link href="css/font-awesome.css" rel="stylesheet">
@@ -61,8 +61,8 @@
               </div>
               <div class="col-md-6 col-sm-6 col-xs-6">
                 <div class="aa-header-right">
-                  <a href="register.html" class="aa-register">Register</a>
-                  <a href="signin.html" class="aa-login">Login</a>
+                  <a href="login.html" class="aa-register">Register</a>
+                  <a href="login.html" class="aa-login">Login</a>
                 </div>
               </div>
             </div>
@@ -221,11 +221,11 @@
                   <div class="aa-single-advance-search">
                     <div class="wrapper">
                       <div class="search-input">
-                        <input class="input" type="text" placeholder="Type Your Location">
+                        <input class="input" type="text" id="location" placeholder="Type Your Location">
                         <div class="autocom-box">
-                          <li>Mumbai, Maharashtra</li>
-                          <li>Gurgaon, Delhi</li>
-                          <li>Baga Beach, Goa</li>
+                          <li>Mumbai</li>
+                          <li>Gurgaon</li>
+                          <li>Baga Beach</li>
                         </div>
                       </div>
                     </div>
@@ -233,7 +233,7 @@
                 </div>
                 <div class="col-md-2">
                   <div class="aa-single-advance-search">
-                    <select>
+                    <select id="category">
                      <option value="0" selected>Category</option>
                       <option value="1">Single</option>
                       <option value="2">Double Sharing</option>
@@ -243,7 +243,7 @@
                 </div>
                 <div class="col-md-2">
                    <div class="aa-single-advance-search">
-                    <select>
+                    <select id="type1">
                       <option value="0" selected> Type</option>
                       <option value="1">Girls Only </option>
                       <option value="2">Boys Only </option>
@@ -253,7 +253,7 @@
                 </div>
                 <div class="col-md-2">
                    <div class="aa-single-advance-search">
-                    <select>
+                    <select id="type2">
                       <option value="0" selected>Type</option>
                       <option value="1">AC</option>
                       <option value="2">Non-AC</option>
@@ -262,7 +262,7 @@
                 </div>
                 <div class="col-md-2">
                   <div class="aa-single-advance-search">
-                    <input class="aa-search-btn" type="submit" value="Search">
+                    <input class="aa-search-btn" id="search" type="submit" value="Search">
                   </div>
                 </div>
               </div>
@@ -554,6 +554,37 @@
   <!-- <script src="js/suggestions.js"></script> -->
   <script src="js/script_loc.js"></script>
 
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAhv7JsSyy--RCW-lgGRVxGziRSsT5UvTo",
+    authDomain: "findyourpg0090.firebaseapp.com",
+    databaseURL: "https://findyourpg0090-default-rtdb.firebaseio.com",
+    projectId: "findyourpg0090",
+    storageBucket: "findyourpg0090.appspot.com",
+    messagingSenderId: "783097512154",
+    appId: "1:783097512154:web:183fef12dde68adc82e5e3",
+    measurementId: "G-D7K6ZE38L8"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<!--Firebase Realtime DB-->
+<script src="js/firebasedb.js"></script>
 
   </body>
 </html>
