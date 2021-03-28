@@ -21,6 +21,7 @@ signInButton.addEventListener('click', () => {
 const database=firebase.database();
 const rootref=database.ref('Users/');
 
+
 login.addEventListener('click', ()=>{
 
 	firebase.auth().signInWithEmailAndPassword(email1.value, password1.value)
@@ -64,11 +65,11 @@ signup.addEventListener('click', ()=>{
   .then((userCredential) => {
     // Signed in 
     var user = userCredential.user;
-	database.ref('Users/'+user.uid).set({
+    console.log(user.uid);
+    database.ref('/Users/'+user.uid).set({
 		'name': name1.value,
 		'email': email.value
 	});
-	console.log(user.uid);
 	// ...
   })
   .catch((error) => {
