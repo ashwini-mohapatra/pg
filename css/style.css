@@ -208,7 +208,8 @@ img {
   right: 0;
   top: 35px;
   width: 100%;
-  z-index: 99;
+  z-index: 999;
+
 }
 #aa-menu-area .main-navbar {
   background-color: transparent;
