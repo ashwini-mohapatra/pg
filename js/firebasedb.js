@@ -8,9 +8,18 @@ const database=firebase.database();
 const rootref=database.ref('Properties/');
 var str=firebase.storage();
 
-search.addEventListener('click',(e)=>{
-    e.preventDefault();
+function searching(){
     rootref.child(loc.value).on('value',snapshot =>{
         console.log(snapshot.val());
     });
+}
+
+search.addEventListener('click',(e)=>{
+    e.preventDefault();
+    searching();
+});
+$(document).keypress(function(e){
+    if (e.which == 13){
+       searching();
+    }
 });
