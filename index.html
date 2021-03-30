@@ -215,84 +215,86 @@
       <div class="container">
         <div class="aa-advance-search-area">
           <div class="form">
-           <div class="aa-advance-search-top">
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="aa-single-advance-search">
-                    <div class="wrapper">
-                      <div class="search-input">
-                        <input class="input" type="text" placeholder="Type Your Location">
-                        <div class="autocom-box">
-                          <li>Mumbai, Maharashtra</li>
-                          <li>Gurgaon, Delhi</li>
-                          <li>Baga Beach, Goa</li>
+            <form method="GET" action="/properties.html">
+              <div class="aa-advance-search-top">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="aa-single-advance-search">
+                      <div class="wrapper">
+                        <div class="search-input">
+                          <input class="input" type="text" placeholder="Type Your Location" name="location">
+                          <div class="autocom-box">
+                            <li>Mumbai, Maharashtra</li>
+                            <li>Gurgaon, Delhi</li>
+                            <li>Baga Beach, Goa</li>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-md-2">
-                  <div class="aa-single-advance-search">
-                    <select>
-                     <option value="0" selected>Category</option>
-                      <option value="1">Single</option>
-                      <option value="2">Double Sharing</option>
-                      <option value="3">Triple Sharing</option>
-                    </select>
+                  <div class="col-md-2">
+                    <div class="aa-single-advance-search">
+                      <select>
+                        <option value="0" selected>Category</option>
+                        <option value="1">Single</option>
+                        <option value="2">Double Sharing</option>
+                        <option value="3">Triple Sharing</option>
+                      </select>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-2">
-                   <div class="aa-single-advance-search">
-                    <select>
-                      <option value="0" selected> Type</option>
-                      <option value="1">Girls Only </option>
-                      <option value="2">Boys Only </option>
-                      <option value="3">Mixed</option>
-                    </select>
-                </div>
-                </div>
-                <div class="col-md-2">
-                   <div class="aa-single-advance-search">
-                    <select>
-                      <option value="0" selected>Type</option>
-                      <option value="1">AC</option>
-                      <option value="2">Non-AC</option>
-                    </select>
-                </div>
-                </div>
-                <div class="col-md-2">
-                  <div class="aa-single-advance-search">
-                    <input class="aa-search-btn" type="submit" value="Search">
+                  <div class="col-md-2">
+                    <div class="aa-single-advance-search">
+                     <select>
+                        <option value="0" selected> Type</option>
+                        <option value="1">Girls Only </option>
+                        <option value="2">Boys Only </option>
+                        <option value="3">Mixed</option>
+                      </select>
+                  </div>
+                  </div>
+                  <div class="col-md-2">
+                     <div class="aa-single-advance-search">
+                      <select>
+                        <option value="0" selected>Type</option>
+                        <option value="1">AC</option>
+                        <option value="2">Non-AC</option>
+                      </select>
+                  </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="aa-single-advance-search" id="search">
+                      <input class="aa-search-btn" type="submit" value="Search" >
+                    </div>
                   </div>
                 </div>
               </div>
+            <div class="aa-advance-search-bottom">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="aa-single-filter-search">
+                    <span>Number of Rooms:</span>
+                    <span>FROM</span>
+                    <span id="skip-value-lower" class="example-val">1</span>
+                    <span>TO</span>
+                    <span id="skip-value-upper" class="example-val">10</span>
+                    <div id="aa-sqrfeet-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
+                    </div>                  
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="aa-single-filter-search">
+                    <span>Price(₹):</span>
+                    <span>FROM</span>
+                    <span id="skip-value-lower2" class="example-val">30.00</span>
+                    <span>TO</span>
+                    <span id="skip-value-upper2" class="example-val">100.00</span>
+                    <div id="aa-price-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
+                    </div>      
+                  </div>
+                </div>
+              </div>  
             </div>
-           <div class="aa-advance-search-bottom">
-             <div class="row">
-              <div class="col-md-6">
-                <div class="aa-single-filter-search">
-                  <span>Number of Rooms:</span>
-                  <span>FROM</span>
-                  <span id="skip-value-lower" class="example-val">1</span>
-                  <span>TO</span>
-                  <span id="skip-value-upper" class="example-val">10</span>
-                  <div id="aa-sqrfeet-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                  </div>                  
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="aa-single-filter-search">
-                  <span>Price(₹):</span>
-                  <span>FROM</span>
-                  <span id="skip-value-lower2" class="example-val">30.00</span>
-                  <span>TO</span>
-                  <span id="skip-value-upper2" class="example-val">100.00</span>
-                  <div id="aa-price-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                  </div>      
-                </div>
-              </div>
-            </div>  
-           </div>
+          </form>
           </div>
         </div>
       </div>
