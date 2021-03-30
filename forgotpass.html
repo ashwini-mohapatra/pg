@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FindYourPG | Login</title>
 
-    
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>    
   <link rel="stylesheet" href="css/login.css"> 
 
   <!-- Favicon -->
@@ -119,34 +119,56 @@
 
 </head>
 <body>
-
     <div class="container" id="container">
         <div class="form-container sign-in-container">
             <form action="#">
-                <h1>Login</h1>
-                <div class="social-container">
-                    <a href="#" id="glogin" class="social"><i class="fab fa-google-plus-g"></i></a>
-                </div>
-                <span>or use your account</span> <br>
-                <input id="email" type="email" placeholder="Email" /> <br>
-                <input id="password" type="password" placeholder="Password" /> 
-                <a href="forgotpass.html">Forgot your password?</a>
-                <button id="login">Login</button>
+                <h1>Forgot Password</h1>
+                <br>
+                <input type="email" placeholder="Email" id="resetemail"/>
+                <br>
+                <button id="resetpass">Reset Password</button>
             </form>
         </div>
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-right">
-                    <h1>Hello!</h1>
-                    <p>Enter your personal details and start your journey with us!</p>
-                        <button class="ghost" id="signUp"><a href="signup.html">Sign Up</a></button>
+                    <h1>Welcome Back!</h1>
+                    <p>To continue booking please login with your personal infomation.</p>
+                    <button class="ghost" id="signIn"><a href="login.html">Login</a></button>
                 </div>
             </div>
         </div>
     </div>
 
     
-            <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <!-- jQuery library -->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+  <script src="js/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.js"></script>
+  <!-- slick slider -->
+  <script type="text/javascript" src="js/slick.js"></script>
+  <!-- Price picker slider -->
+  <script type="text/javascript" src="js/nouislider.js"></script>
+  <!-- mixit slider -->
+  <script type="text/javascript" src="js/jquery.mixitup.js"></script>
+  <!-- Add fancyBox -->
+  <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+  <!-- Custom js -->
+  <script src="js/custom.js"></script>
+
+
+  <!-- Location Search Bar -->
+  <!-- <script src="js/suggestions.js"></script> -->
+  <script src="js/script_loc.js"></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
@@ -173,29 +195,7 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 </script>
-
-    <!-- jQuery library -->
-  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-  <script src="js/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.js"></script>
-  <!-- slick slider -->
-  <script type="text/javascript" src="js/slick.js"></script>
-  <!-- Price picker slider -->
-  <script type="text/javascript" src="js/nouislider.js"></script>
-  <!-- mixit slider -->
-  <script type="text/javascript" src="js/jquery.mixitup.js"></script>
-  <!-- Add fancyBox -->
-  <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-  <!-- Custom js -->
-  <script src="js/custom.js"></script>
-
-
-  <!-- Location Search Bar -->
-  <!-- <script src="js/suggestions.js"></script> -->
-  <script src="js/script_loc.js"></script>
-
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="js/login.js"></script>
-  </body>
+<!-- Active js -->
+<script src="/js/forgotpass.js"></script>    
+</body>
 </html>
