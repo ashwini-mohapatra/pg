@@ -1,3 +1,4 @@
+window.onload=function(){ 
 const loc=document.getElementById('location');
 const category=document.getElementById('category');
 const type1=document.getElementById('type1');
@@ -8,7 +9,6 @@ const database=firebase.database();
 const rootref=database.ref('Properties/');
 var str=firebase.storage();
 
-document.getElementById("location").innerHTML = sessionStorage.loc;
 function searching(){
     rootref.child(loc.value).on('value',snapshot =>{
         console.log(snapshot.val());
@@ -16,11 +16,15 @@ function searching(){
 }
 
 search.addEventListener('click',(e)=>{
-    e.preventDefault();
-    searching();
+    localStorage.loc=loc.value;
+    console.log(localStorage.loc);
+    window.open("properties.html","_self");
 });
 $(document).keypress(function(e){
     if (e.which == 13){
-       searching();
+        localStorage.loc=loc.value;
+        console.log(localStorage.loc);
+        window.open("properties.html","_self");
     }
 });
+};
