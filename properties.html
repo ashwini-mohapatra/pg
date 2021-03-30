@@ -7,7 +7,7 @@
   <title>FindYourPG | Properties</title>
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
 
   <!-- Font awesome -->
   <link href="css/font-awesome.css" rel="stylesheet">
@@ -21,9 +21,9 @@
   <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" />
   <!-- Theme color -->
   <link id="switcher" href="css/theme-color/default-theme.css" rel="stylesheet">
-
   <!-- Main style sheet -->
   <link href="css/style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
 
   <!-- Google Font -->
@@ -63,8 +63,8 @@
               </div>
               <div class="col-md-6 col-sm-6 col-xs-6">
                 <div class="aa-header-right">
-                  <a href="signup.html" class="aa-register">Sign Up</a>
-                  <a href="login.html" class="aa-login">Login</a>
+                  <a href="register.html" class="aa-register">Register</a>
+                  <a href="signin.html" class="aa-login">Login</a>
                 </div>
               </div>
             </div>
@@ -168,175 +168,27 @@
             </div>
             <!-- Start properties content body -->
             <div class="aa-properties-content-body">
-              <ul class="aa-properties-nav">
-                <li>
+              <ul class="aa-properties-nav" id='propertiesList'>
+                <li v-for="item in properties" :key="item['Property Name']" >
                   <article class="aa-properties-item">
                     <a class="aa-properties-item-img" href="prop-details.html">
                       <img alt="img"
-                        src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fGJlZHJvb218ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+                        v-bind:src="item['Images Link']">
                     </a>
-                    <div class="aa-tag for-rent">
-                      Exclusive
-                    </div>
                     <div class="aa-properties-item-content">
                       <div class="aa-properties-info">
-                        <span>1 Room</span>
-                        <span>2 Beds</span>
-                        <span>1 Bath</span>
+                        <span>No of Rooms: {{item['No of Rooms']}}</span>
+                        <span>No of Beds: {{item['No of Beds']}}</span>
+                        <span>No of Bath: {{item['No of Bath']}}</span>
                         <!-- <span>1100 SQ FT</span> -->
                       </div>
                       <div class="aa-properties-about">
-                        <h3><a href="prop-details.html"> Townhouse</a></h3>
-                        <p>Sharing Rooms for citizens living near dwarka</p>
+                        <h3><a href="prop-details.html"> {{item['Property Name']}}</a></h3>
+                        <p>{{item['Property Description']}}</p>
                       </div>
                       <div class="aa-properties-detial">
                         <span class="aa-price">
-                          3500/Month
-                        </span>
-                        <a class="aa-secondary-btn" href="prop-details.html">View Details</a>
-                      </div>
-                    </div>
-                  </article>
-                </li>
-                <li>
-                  <article class="aa-properties-item">
-                    <a class="aa-properties-item-img" href="prop-details.html">
-                      <img alt="img"
-                        src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fGJlZHJvb218ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-                    </a>
-                    <div class="aa-tag sold-out">
-                      Best Rated
-                    </div>
-                    <div class="aa-properties-item-content">
-                      <div class="aa-properties-info">
-                        <span>2 Rooms</span>
-                        <span>2 Beds</span>
-                        <span>2 Baths</span>
-                        <!-- <span>1200 SQ FT</span> -->
-                      </div>
-                      <div class="aa-properties-about">
-                        <h3><a href="prop-details.html">Bijju PG</a></h3>
-                        <p>Sharing Rooms for citizens living near dwarka</p>
-                      </div>
-                      <div class="aa-properties-detial">
-                        <span class="aa-price">
-                          ₹4500/Month
-                        </span>
-                        <a class="aa-secondary-btn" href="prop-details.html">View Details</a>
-                      </div>
-                    </div>
-                  </article>
-                </li>
-                <li>
-                  <article class="aa-properties-item">
-                    <a class="aa-properties-item-img" href="prop-details.html">
-                      <img alt="img"
-                        src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fGJlZHJvb218ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-                    </a>
-                    <div class="aa-tag sold-out">
-                      Top-Rated
-                    </div>
-                    <div class="aa-properties-item-content">
-                      <div class="aa-properties-info">
-                        <span>5 Rooms</span>
-                        <span>2 Beds</span>
-                        <span>3 Baths</span>
-                        <!-- <span>1100 SQ FT</span> -->
-                      </div>
-                      <div class="aa-properties-about">
-                        <h3><a href="prop-details.html">Rajesh PG</a></h3>
-                        <p>Sharing Rooms for citizens living near dwarka</p>
-                      </div>
-                      <div class="aa-properties-detial">
-                        <span class="aa-price">
-                          ₹35000/Month
-                        </span>
-                        <a class="aa-secondary-btn" href="prop-details.html">View Details</a>
-                      </div>
-                    </div>
-                  </article>
-                </li>
-                <li>
-                  <article class="aa-properties-item">
-                    <a class="aa-properties-item-img" href="prop-details.html">
-                      <img alt="img"
-                        src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fGJlZHJvb218ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-                    </a>
-                    <div class="aa-tag for-sale">
-                      Top-Rated
-                    </div>
-                    <div class="aa-properties-item-content">
-                      <div class="aa-properties-info">
-                        <span>5 Rooms</span>
-                        <span>2 Beds</span>
-                        <span>3 Baths</span>
-                        <!-- <span>1100 SQ FT</span> -->
-                      </div>
-                      <div class="aa-properties-about">
-                        <h3><a href="prop-details.html">Raje PG</a></h3>
-                        <p>Sharing Rooms for citizens living near dwarka</p>
-                      </div>
-                      <div class="aa-properties-detial">
-                        <span class="aa-price">
-                          ₹35000/Month
-                        </span>
-                        <a class="aa-secondary-btn" href="prop-details.html">View Details</a>
-                      </div>
-                    </div>
-                  </article>
-                </li>
-                <li>
-                  <article class="aa-properties-item">
-                    <a class="aa-properties-item-img" href="prop-details.html">
-                      <img alt="img"
-                        src=https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fGJlZHJvb218ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60>
-                    </a>
-                    <div class="aa-tag for-rent">
-                      Exclusive
-                    </div>
-                    <div class="aa-properties-item-content">
-                      <div class="aa-properties-info">
-                        <span>5 Rooms</span>
-                        <span>2 Beds</span>
-                        <span>3 Baths</span>
-                        <!-- <span>1100 SQ FT</span> -->
-                      </div>
-                      <div class="aa-properties-about">
-                        <h3><a href="prop-details.html">Rupak PG</a></h3>
-                        <p>Sharing Rooms for citizens living near dwarka</p>
-                      </div>
-                      <div class="aa-properties-detial">
-                        <span class="aa-price">
-                          ₹55000/Month
-                        </span>
-                        <a class="aa-secondary-btn" href="prop-details.html">View Details</a>
-                      </div>
-                    </div>
-                  </article>
-                </li>
-                <li>
-                  <article class="aa-properties-item">
-                    <a class="aa-properties-item-img" href="prop-details.html">
-                      <img alt="img"
-                        src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fGJlZHJvb218ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-                    </a>
-                    <div class="aa-tag for-sale">
-                      For Sale
-                    </div>
-                    <div class="aa-properties-item-content">
-                      <div class="aa-properties-info">
-                        <span>5 Rooms</span>
-                        <span>2 Beds</span>
-                        <span>3 Baths</span>
-                        <!-- <span>1100 SQ FT</span> -->
-                      </div>
-                      <div class="aa-properties-about">
-                        <h3><a href="prop-details.html">JP PG</a></h3>
-                        <p>Sharing Rooms for citizens living near dwarka</p>
-                      </div>
-                      <div class="aa-properties-detial">
-                        <span class="aa-price">
-                          ₹35000/Month
+                          {{item['Rent']}}/Month
                         </span>
                         <a class="aa-secondary-btn" href="prop-details.html">View Details</a>
                       </div>
@@ -379,7 +231,7 @@
                 <div class="aa-single-advance-search">
                   <div class="wrapper">
                     <div class="search-input">
-                      <input class="input" type="text" placeholder="Type Your Location">
+                      <input class="input" type="text" id='location' placeholder="Type Your Location">
                       <div class="autocom-box">
                         <li>Mumbai, Maharashtra</li>
                         <li>Gurgaon, Delhi</li>
@@ -425,7 +277,7 @@
                   </div>
                 </div>
                 <div class="aa-single-filter-search">
-                  <span>PRICE(₹)</span>
+                  <span>PRICE</span>
                   <span>FROM</span>
                   <span id="skip-value-lower2" class="example-val">200.00</span>
                   <span>TO</span>
@@ -434,7 +286,7 @@
                   </div>
                 </div>
                 <div class="aa-single-advance-search">
-                  <input type="submit" value="Search" class="aa-search-btn">
+                  <input type="submit" id='search' value="Search" class="aa-search-btn">
                 </div>
               </form>
             </div>
@@ -550,7 +402,35 @@
   <!-- Location Search Bar -->
   <!-- <script src="js/suggestions.js"></script> -->
   <script src="js/script_loc.js"></script>
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
 
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAhv7JsSyy--RCW-lgGRVxGziRSsT5UvTo",
+    authDomain: "findyourpg0090.firebaseapp.com",
+    databaseURL: "https://findyourpg0090-default-rtdb.firebaseio.com",
+    projectId: "findyourpg0090",
+    storageBucket: "findyourpg0090.appspot.com",
+    messagingSenderId: "783097512154",
+    appId: "1:783097512154:web:183fef12dde68adc82e5e3",
+    measurementId: "G-D7K6ZE38L8"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+  <script src="js/firebasedb.js"></script>
+  <script src="js/property_filtering.js"></script>
 </body>
 
 </html>
