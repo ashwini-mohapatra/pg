@@ -1,13 +1,13 @@
 // Properties Filtering
 
 var properties = new Vue({
-    el: '#propertiesList',
-    data: {
-      message: 'Hello Vue!',
-      properties:[
-    ]
-    }
-  })
+  el: '#propertiesList',
+  data: {
+    message: 'Hello Vue!',
+    properties:[
+  ]
+  }
+})
 
 const loc=document.getElementById('location');
 const category=document.getElementById('category');
@@ -20,14 +20,13 @@ const rootref=database.ref('Properties/');
 var str=firebase.storage();
 
 search.addEventListener('click',(e)=>{
-    e.preventDefault();
-    rootref.child(loc.value).on('value',snapshot =>{
-        var temp = []
-        snapshot.val().forEach((item)=>{
-            temp.push(item);
-        })
-        properties.properties = temp
-    });
+  e.preventDefault();
+  rootref.child(loc.value).on('value',snapshot =>{
+      var temp = []
+      snapshot.val().forEach((item)=>{
+          temp.push(item);
+      })
+      properties.properties = temp
+  });
 });
-
 
