@@ -177,18 +177,21 @@
                     </a>
                     <div class="aa-properties-item-content">
                       <div class="aa-properties-info">
+                        <span>Category: {{item['Category']}}</span> <br>
                         <span>No of Rooms: {{item['No of Rooms']}}</span>
-                        <span>No of Beds: {{item['No of Beds']}}</span>
-                        <span>No of Bath: {{item['No of Bath']}}</span>
+                        <span>No of Beds: {{item['No of Beds']}}</span> <br>
+                        <span>Type: {{item['Type1']}}</span>
+                        <span>Type: {{item['Type2']}}</span>
                         <!-- <span>1100 SQ FT</span> -->
                       </div>
                       <div class="aa-properties-about">
                         <h3><a href="prop-details.html"> {{item['Property Name']}}</a></h3>
+                        <p>{{item['Location']}}</p>
                         <p>{{item['Property Description']}}</p>
                       </div>
                       <div class="aa-properties-detial">
                         <span class="aa-price">
-                          {{item['Rent']}}/Month
+                          ₹{{item['Rent']}}/Month
                         </span>
                         <a class="aa-secondary-btn" href="prop-details.html">View Details</a>
                       </div>
