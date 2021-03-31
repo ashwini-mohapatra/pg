@@ -63,8 +63,8 @@
               </div>
               <div class="col-md-6 col-sm-6 col-xs-6">
                 <div class="aa-header-right">
-                  <a href="register.html" class="aa-register">Register</a>
-                  <a href="signin.html" class="aa-login">Login</a>
+                  <a href="signup.html" class="aa-register">Register</a>
+                  <a href="login.html" class="aa-login">Login</a>
                 </div>
               </div>
             </div>
@@ -223,6 +223,7 @@
         </div>
         <!-- Start properties sidebar -->
         <div class="col-md-4">
+        <form action="/properties.html" method="GET">
           <aside class="aa-properties-sidebar">
             <!-- Start Single properties sidebar -->
             <div class="aa-properties-single-sidebar">
@@ -230,7 +231,7 @@
                 <div class="aa-single-advance-search">
                   <div class="wrapper">
                     <div class="search-input">
-                      <input class="input" type="text" id='location' placeholder="Type Your Location">
+                      <input class="input" type="text" id='location' placeholder="Type Your Location" name="location">
                       <div class="autocom-box">
                         <li>Mumbai, Maharashtra</li>
                         <li>Gurgaon, Delhi</li>
@@ -337,6 +338,7 @@
             </div>
           </aside>
         </div>
+      </form>
       </div>
     </div>
   </section>

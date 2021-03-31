@@ -9,7 +9,7 @@ window.onload=function(){
   
   glogin.addEventListener('click',()=>{
     var provider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().useDeviceLanguage();
+   firebase.auth().useDeviceLanguage();
   // To apply the default browser preference instead of explicitly setting it.
   // firebase.auth().useDeviceLanguage();
   firebase.auth().signInWithPopup(provider).then((result) => {
