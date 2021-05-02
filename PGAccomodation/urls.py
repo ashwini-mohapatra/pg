@@ -22,5 +22,7 @@ urlpatterns = [
     path('signup/', include('PG.urls'), name='signup'),
     path('properties/', include('PG.urls'), name='property'),
     path('properties_details/', include('PG.urls'), name='property_details'),
+    path('contact/', include('PG.urls'), name='contact'),
+    path('forgotpass/', include('PG.urls'), name='forgotpass'),
     path('admin/', admin.site.urls),
 ]

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  {% load static %}
+
+    <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FindYourPG | Login</title>
@@ -37,7 +39,9 @@
 </head>
 
 <body class="aa-price-range">
-  <!-- Pre Loader -->
+{% load static %}
+
+<!-- Pre Loader -->
   <div id="aa-preloader-area">
     <div class="pulse"></div>
   </div>
@@ -66,8 +70,8 @@
               </div>
               <div class="col-md-6 col-sm-6 col-xs-6">
                 <div class="aa-header-right">
-                  <a href="signup.html" class="aa-register">Sign Up</a>
-                  <a href="login.html" class="aa-login">Login</a>
+                  <a href="/signup" class="aa-register">Sign Up</a>
+                  <a href="/login" class="aa-login">Login</a>
                 </div>
               </div>
             </div>
@@ -98,7 +102,7 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-            <li><a href="index.html">HOME</a></li>
+            <li><a href="">HOME</a></li>
             <li class="dropdown active">
               <a class="dropdown-toggle" data-toggle="dropdown" href="properties.html">PROPERTIES <span
                   class="caret"></span></a>
@@ -108,7 +112,7 @@
               </ul>
             </li>
             </li>
-            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="/contact">CONTACT</a></li>
           </ul>
         </div>
         <!--/.nav-collapse -->
@@ -130,7 +134,7 @@
                 <span>or use your account</span> <br>
                 <input id="email" type="email" placeholder="Email" /> <br>
                 <input id="password" type="password" placeholder="Password" />
-                <a href="forgotpass.html">Forgot your password?</a>
+                <a href="/forgotpass">Forgot your password?</a>
                 <button id="login">Login</button>
             </form>
         </div>

@@ -38,3 +38,9 @@ class PG_Views:
 
     def properties_details(self,request,location,category,type1,type2):
         return render(request,'./properties_details.html')
+
+    def contactspage(self,request):
+        return  render(request,'./contact.html')
+
+    def forgotpass(self,request):
+        return render(request,'./forgotpass.html')

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+ {% load static %}
+   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FindYourPG | Sign Up</title>
@@ -35,6 +36,7 @@
 </head>
 
 <body class="aa-price-range">
+  {% load static %}
   <!-- Pre Loader -->
   <div id="aa-preloader-area">
     <div class="pulse"></div>
@@ -64,8 +66,8 @@
               </div>
               <div class="col-md-6 col-sm-6 col-xs-6">
                 <div class="aa-header-right">
-                  <a href="signup.html" class="aa-register">Sign Up</a>
-                  <a href="login.html" class="aa-login">Login</a>
+                  <a href="/signup" class="aa-register">Sign Up</a>
+                  <a href="/login" class="aa-login">Login</a>
                 </div>
               </div>
             </div>
@@ -90,23 +92,23 @@
           </button>
           <!-- LOGO -->
           <!-- Text based logo -->
-          <a class="navbar-brand aa-logo" href="index.html"> FindYour<span>PG</span></a>
+          <a class="navbar-brand aa-logo" href=""> FindYour<span>PG</span></a>
           <!-- Image based logo -->
           <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-            <li><a href="index.html">HOME</a></li>
+            <li><a href="">HOME</a></li>
             <li class="dropdown active">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="properties.html">PROPERTIES <span
+              <a class="dropdown-toggle" data-toggle="dropdown" href="/properties">PROPERTIES <span
                   class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="properties.html">PROPERTIES</a></li>
-                <li><a href="properties_details.html">PROPERTIES DETAIL</a></li>
+                <li><a href="/properties">PROPERTIES</a></li>
+                <li><a href="/properties_details">PROPERTIES DETAIL</a></li>
               </ul>
             </li>
             </li>
-            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="/contact">CONTACT</a></li>
           </ul>
         </div>
         <!--/.nav-collapse -->
@@ -140,7 +142,7 @@
                 <div class="overlay-panel overlay-right">
                     <h1>Welcome Back!</h1>
                     <p>To continue booking please login with your personal infomation.</p>
-                    <button class="ghost" id="signIn"><a href="login.html">Login</a></button>
+                    <button class="ghost" id="signIn"><a href="/login">Login</a></button>
                 </div>
             </div>
         </div>

@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
+    {% load static %}
+  <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FindYourPG | Properties Details</title>
@@ -35,6 +36,7 @@
 </head>
 
 <body class="aa-price-range">
+  {% load static %}
     <div id="aa-preloader-area">
         <div class="pulse"></div>
     </div>
@@ -63,8 +65,8 @@
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-6">
                                 <div class="aa-header-right">
-                                    <a href="signup.html" class="aa-register">Sign Up</a>
-                                    <a href="login.html" class="aa-login">Login</a>
+                                    <a href="/signup" class="aa-register">Sign Up</a>
+                                    <a href="/login" class="aa-login">Login</a>
                                 </div>
                             </div>
                         </div>
@@ -88,22 +90,22 @@
                         <span class="icon-bar"></span>
                     </button>
 
-                    <a class="navbar-brand aa-logo" href="index.html"> FindYour<span>PG</span></a>
+                    <a class="navbar-brand aa-logo" href="/index"> FindYour<span>PG</span></a>
                     <!-- Image based logo -->
                     <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="">HOME</a></li>
                         <li class="dropdown active">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="properties.html">PROPERTIES <span
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="/properties">PROPERTIES <span
                                     class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="properties.html">PROPERTIES</a></li>
-                                <li><a href="properties_details.html">PROPERTIES DETAIL</a></li>
+                                <li><a href="/properties">PROPERTIES</a></li>
+                                <li><a href="/properties_details">PROPERTIES DETAIL</a></li>
                             </ul>
                         </li>
-                        <li><a href="contact.html">CONTACT</a></li>
+                        <li><a href="/contact">CONTACT</a></li>
                     </ul>
                 </div>
 
@@ -121,7 +123,7 @@
                     <div class="aa-property-header-inner">
                         <h2>Properties Page</h2>
                         <ol class="breadcrumb">
-                            <li><a href="index.html">HOME</a></li>
+                            <li><a href="">HOME</a></li>
                             <li class="active">PROPERTIES</li>
                         </ol>
                     </div>
@@ -203,7 +205,7 @@
                                         <div class="col-md-6">
                                             <article class="aa-properties-item">
                                                 <a class="aa-properties-item-img" href="#">
-                                                    <img alt="img" src="img/item/1.jpg">
+                                                    <img alt="img" src="./static/img/item/1.jpg">
                                                 </a>
                                                 <div class="aa-tag for-sale">
                                                     For Sale
@@ -391,7 +393,7 @@
                         <div class="row">
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="aa-footer-left">
-                                    <h1><p>FindYour<a rel="nofollow" href="index.html">PG</a></p></h1>
+                                    <h1><p>FindYour<a rel="nofollow" href="">PG</a></p></h1>
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-12">
@@ -404,10 +406,10 @@
                             </div>
                             <div class="col-md-6 col-sm-12 col-xs-12">
                                 <div class="aa-footer-right">
-                                    <a href="index.html">Home</a>
+                                    <a href="">Home</a>
                                     <a href="#">Support</a>
                                     <a href="#">License</a>
-                                    <a href="contact.html">Contact</a>
+                                    <a href="/contact">Contact</a>
                                     <a href="#">Privacy & Term</a>
                                 </div>
                             </div>

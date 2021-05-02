@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    {% load static %}
+  <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FindYourPG | Contact</title>
@@ -34,6 +35,7 @@
 
   </head>
   <body>
+{% load static %}
 
   <!-- Pre Loader -->
   <div id="aa-preloader-area">
@@ -64,8 +66,8 @@
               </div>
               <div class="col-md-6 col-sm-6 col-xs-6">
                 <div class="aa-header-right">
-                  <a href="signup.html" class="aa-register">Sign Up</a>
-                  <a href="login.html" class="aa-login">Login</a>
+                  <a href="/signup" class="aa-register">Sign Up</a>
+                  <a href="/login" class="aa-login">Login</a>
                 </div>
               </div>
             </div>
@@ -123,7 +125,7 @@
           <div class="aa-property-header-inner">
             <h2>Contact</h2>
             <ol class="breadcrumb">
-            <li><a href="index.html">HOME</a></li>
+            <li><a href="">HOME</a></li>
             <li class="active">Contact</li>
           </ol>
           </div>

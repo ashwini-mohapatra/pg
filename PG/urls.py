@@ -9,5 +9,7 @@ urlpatterns = [
     path('signup/', PG_Views().signuppage, name='signup'),
     path('properties/', PG_Views().properties, name='property'),
     path('properties_details/', PG_Views().properties_details, name='property_details'),
+    path('contact/', PG_Views().contactspage, name='contacts'),
+    path('forgotpass/', PG_Views().forgotpass,name='forgotpass'),
     path('admin/', admin.site.urls),
 ]
