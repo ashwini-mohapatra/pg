@@ -1,0 +1,567 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  {% load static %}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FindYourPG | Home</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static '/img/favicon.ico' %}" type="image/x-icon">
+
+    <!-- Font awesome -->
+    <link href="./static/css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="./static/css/bootstrap.css" rel="stylesheet">
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="./static/css/slick.css">
+    <!-- price picker slider -->
+    <link rel="stylesheet" type="text/css" href="./static/css/nouislider.css">
+    <!-- Fancybox slider -->
+    <link rel="stylesheet" href="./static/css/jquery.fancybox.css" type="text/css" media="screen" />
+    <!-- Theme color -->
+    <link id="switcher" href="./static/css/theme-color/default-theme.css" rel="stylesheet">
+
+    <!-- Main style sheet -->
+    <link href="./static/css/style.css" rel="stylesheet">
+
+
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+
+  </head>
+  <body class="aa-price-range">
+  {% load static %}
+  <!-- Pre Loader -->
+  <div id="aa-preloader-area">
+    <div class="pulse"></div>
+  </div>
+  <!-- SCROLL TOP BUTTON -->
+    <a class="scrollToTop" href="#"><i class="fa fa-angle-double-up"></i></a>
+  <!-- END SCROLL TOP BUTTON -->
+
+  <!-- Start header section -->
+  <header id="aa-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-header-area">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="aa-header-left">
+                  <div class="aa-telephone-no">
+                    <span class="fa fa-phone"></span>
+                    1-900-523-3564
+                  </div>
+                  <div class="aa-email hidden-xs">
+                    <span class="fa fa-envelope-o"></span> info@findyourpg.com
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <div class="aa-header-right">
+                  <a href="signup.html" class="aa-register">Sign Up</a>
+                  <a href="login.html" class="aa-login">Login</a>
+                  <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_GtIhlKaB55jbxR" async> </script> </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End header section -->
+
+  <!-- Start menu section -->
+  <section id="aa-menu-area">
+    <nav class="navbar navbar-default main-navbar" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- LOGO -->
+          <!-- Text based logo -->
+           <a class="navbar-brand aa-logo" href="index.html"> FindYour<span>Pg</span></a>
+           <!-- Image based logo -->
+           <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
+            <li class="active"><a href="index.html">HOME</a></li>
+             <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="properties.html">PROPERTIES <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="properties.html">PROPERTIES</a></li>
+                <li><a href="properties_details.html">PROPERTIES DETAIL</a></li>
+              </ul>
+            </li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+  </section>
+  <!-- End menu section -->
+
+  <!-- Start slider  -->
+  <section id="aa-slider">
+    <div class="aa-slider-area">
+      <!-- Top slider -->
+      <div class="aa-top-slider">
+        <!-- Top slider single slide -->
+        <div class="aa-top-slider-single">
+          <img src="./static/img/slider/3.jpg" alt="img">
+          <!-- Top slider content -->
+          <div class="aa-top-slider-content">
+            <span class="aa-top-slider-catg">Duplex</span>
+            <h2 class="aa-top-slider-title">Paradise Complex</h2>
+            <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>Mhada Colony 20, Powai, Mumbai, Maharashtra</p>
+            <span class="aa-top-slider-off">Best Rated</span>
+            <p class="aa-top-slider-price">₹65,000</p>
+            <a href="properties_details.html" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
+          </div>
+          <!-- / Top slider content -->
+        </div>
+        <!-- / Top slider single slide -->
+        <!-- Top slider single slide -->
+        <div class="aa-top-slider-single">
+          <img src="./static/img/slider/2.jpg" alt="img">
+          <!-- Top slider content -->
+          <div class="aa-top-slider-content">
+            <span class="aa-top-slider-catg">Single</span>
+            <h2 class="aa-top-slider-title">Hello Heaven</h2>
+            <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>South Bombay, Marine </p>
+            <span class="aa-top-slider-off">Flurished Kitchen</span>
+            <p class="aa-top-slider-price">₹46,000</p>
+            <a href="properties_details.html" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
+          </div>
+          <!-- / Top slider content -->
+        </div>
+        <!-- / Top slider single slide -->
+        <!-- Top slider single slide -->
+        <div class="aa-top-slider-single">
+          <img src="./static/img/slider/1.jpg" alt="img">
+          <!-- Top slider content -->
+          <div class="aa-top-slider-content">
+            <span class="aa-top-slider-catg">Duplex</span>
+            <h2 class="aa-top-slider-title">vinay mehta's nest</h2>
+            <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>Baga Beach, Goa</p>
+            <span class="aa-top-slider-off">Breakfast Included</span>
+            <p class="aa-top-slider-price">₹36,000</p>
+            <a href="properties_details.html" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
+          </div>
+          <!-- / Top slider content -->
+        </div>
+        <!-- / Top slider single slide -->
+         <!-- Top slider single slide -->
+        <div class="aa-top-slider-single">
+          <img src="./static/img/slider/5.jpg" alt="img">
+          <!-- Top slider content -->
+          <div class="aa-top-slider-content">
+            <span class="aa-top-slider-catg">Single</span>
+            <h2 class="aa-top-slider-title">Hello Heaven</h2>
+            <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>South Bombay, Marine </p>
+            <span class="aa-top-slider-off">Flurished Kitchen</span>
+            <p class="aa-top-slider-price">₹57,000</p>
+            <a href="properties_details.html" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
+          </div>
+          <!-- / Top slider content -->
+        </div>
+        <!-- / Top slider single slide -->
+         <!-- Top slider single slide -->
+        <div class="aa-top-slider-single">
+          <img src="./static/img/slider/4.jpg" alt="img">
+          <!-- Top slider content -->
+          <div class="aa-top-slider-content">
+            <span class="aa-top-slider-catg">Single</span>
+            <h2 class="aa-top-slider-title">Hello Heaven</h2>
+            <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>South Bombay, Marine </p>
+            <span class="aa-top-slider-off">Flurished Kitchen</span>
+            <p class="aa-top-slider-price">₹46,000</p>
+            <a href="properties_details.html" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
+          </div>
+          <!-- / Top slider content -->
+        </div>
+        <!-- / Top slider single slide -->
+         <!-- Top slider single slide -->
+        <div class="aa-top-slider-single">
+          <img src="./static/img/slider/6.jpg" alt="img">
+          <!-- Top slider content -->
+          <div class="aa-top-slider-content">
+            <span class="aa-top-slider-catg">Single</span>
+            <h2 class="aa-top-slider-title">Hello Heaven</h2>
+            <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>South Bombay, Marine </p>
+            <span class="aa-top-slider-off">Flurished Kitchen</span>
+            <p class="aa-top-slider-price">₹46,000</p>
+            <a href="properties_details.html" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
+          </div>
+          <!-- / Top slider content -->
+        </div>
+        <!-- / Top slider single slide -->
+      </div>
+    </div>
+  </section>
+  <!-- End slider  -->
+
+    <!-- Advance Search -->
+    <section id="aa-advance-search">
+      <div class="container">
+        <div class="aa-advance-search-area">
+          <div class="form">
+            <form method="GET" action="./properties.html">
+              <div class="aa-advance-search-top">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="aa-single-advance-search">
+                      <div class="wrapper">
+                        <div class="search-input">
+                          <input class="input" type="text" placeholder="Type Your Location" name="location">
+                          <div class="autocom-box">
+                            <li>Mumbai, Maharashtra</li>
+                            <li>Gurgaon, Delhi</li>
+                            <li>Baga Beach, Goa</li>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="aa-single-advance-search">
+                      <select name="category">
+                        <option value="0" selected>Category</option>
+                        <option value="1">Single</option>
+                        <option value="2">Double Sharing</option>
+                        <option value="3">Triple Sharing</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="aa-single-advance-search">
+                     <select name="type1">
+                        <option value="0" selected> Type</option>
+                        <option value="1">Girls Only </option>
+                        <option value="2">Boys Only </option>
+                        <option value="3">Mixed</option>
+                      </select>
+                  </div>
+                  </div>
+                  <div class="col-md-2">
+                     <div class="aa-single-advance-search">
+                      <select name="type2">
+                        <option value="0" selected>Type</option>
+                        <option value="1">AC</option>
+                        <option value="2">Non-AC</option>
+                      </select>
+                  </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="aa-single-advance-search" id="search">
+                      <input class="aa-search-btn" type="submit" value="Search" >
+                    </div>
+                  </div>
+                </div>
+              </div>
+{#            </div>  #}
+{#          </div>#}
+        </form>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!-- / Advance Search -->
+
+    <!-- Service section -->
+    <section id="aa-service">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aa-service-area">
+              <div class="aa-title">
+                <h2>Major Cities</h2>
+                <span></span>
+                <p>Finding a home in the a big city</p>
+              </div>
+              <!-- service content -->
+              <div class="aa-service-content">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="aa-single-service">
+                      <div class="aa-service-icon">
+                        <span></span>
+                        <img src="./static/img/cities/Bangaloreiicon.png" alt="">
+                      </div>
+                      <div class="aa-single-service-content">
+                        <h4><a href="properties.html">Bangalore</a></h4>
+                        <!-- <p>Known as the Silicon Valley of India and is soon emerging as a major economic hub and the fastest growing metropolis in India.</p> -->
+                        <p>Accomodations in BTM layout, HSR layout, Koramangala, Indiranagar, Nagwara/Manyata Tech Park, Marathahalli, Jayanagar, Harlur and many more.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="aa-single-service">
+                      <div class="aa-service-icon">
+                        <span></span>
+                        <img src="./static/img/cities/Mumbaiicon.png" alt="">
+                      </div>
+                      <div class="aa-single-service-content">
+                        <h4><a href="properties.html">Mumbai</a></h4>
+                        <p>Accomodations in Andheri, Mira-Bhayandar, Bandra, Borivali, Dahisar, Goregaon, Jogeshwari, Juhu, Khar, Malad, Santacruz,	Vasai and many more.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="aa-single-service">
+                      <div class="aa-service-icon">
+                        <span></span>
+                        <img src="./static/img/cities/Hyderabadicon.png" alt="">
+                      </div>
+                      <div class="aa-single-service-content">
+                        <h4><a href="properties.html">Hyderabad</a></h4>
+                        <p>Accomodations in Banjara Hills, Ameerpet, Begumpet, Somajiguda, Gachibowli, Manikonda, Abids, Nampally, Lakdi Ka Pul, Hitech City, Indira Park and many more.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="aa-single-service">
+                      <div class="aa-service-icon">
+                        <span></span>
+                        <img src="./static/img/cities/Chennaiicon.png" alt="">
+                      </div>
+                      <div class="aa-single-service-content">
+                        <h4><a href="properties.html">Chennai</a></h4>
+                        <p>Accomodations in Nungambakkam, Velachery, Adyar, Gopalapuram, Besant Nagar, Adyar, Tambaram, Nungambakkam, Anna Nagar and many more.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- / Service section -->
+
+  <!-- Promo Banner Section -->
+  <section id="aa-promo-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-promo-banner-area">
+            <h3>Find Your Best Property</h3>
+            <p>Rent a bed or room for yourself, a house for you & your friends or a house for you & your family in any budged and with any other specific requriments.</p>
+            <a href="properties.html" class="aa-view-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / Promo Banner Section -->
+
+  <!-- About us -->
+  <section id="aa-about-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-about-us-area">
+            <div class="row">
+              <div class="col-md-5">
+                <div class="aa-about-us-left">
+                  <img src="./static/img/about-us.png" alt="image">
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="aa-about-us-right">
+                  <div class="aa-title">
+                    <h2>About Us</h2>
+                    <span></span>
+                  </div>
+                  <p>FindYourPG is India's fastest growing "Managed Home Rental Network" attempting to provide better rental solutions via design & technology.
+
+                    We help find, book rental homes of choice across Indian cities. We assist with move-in, provide home maintenance services from cleaning, damages to rent payment & even move-out.
+
+                    Whatever be your budget, whatever you may call a home (a bed, a room or an entire house), we have something for you!</p>
+                  <ul>
+                    <li>We create homes beyond housing and communities beyond homes.</li>
+                    <li>Creating an inclusive living environment where youth have choices but are also required to take ownership.</li>
+                    <li>SIMPLE - At FindYourPG, we want to make finding homes accessible and simple. We want to make living easy by providing additional services and furnished homes so that youth can devote their time to their aspirations.</li>
+                    <li>EQUITABLE - We want to address the issues of young migrants who are discriminated against for various reasons. We want to bridge the gap between youth and the older generation, finding common ground and making the relationships mutually beneficial.</li>
+                    <li>ACCESSIBLE - We want to make housing affordable and cater to individual needs, which greatly vary depending on personality. We wanted to remove the middle-man the broker, who often becomes a decider of where you will stay rather than cater to your taste.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- / About us -->
+
+
+  <!-- Client Testimonial -->
+  <section id="aa-client-testimonial">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="aa-client-testimonial-area">
+            <div class="aa-title">
+              <h2>Don’t Take Our Word For It</h2>
+              <span></span>
+              <p>Look at what others have to say regarding our services and customer care.</p>
+            </div>
+            <!-- testimonial content -->
+            <div class="aa-testimonial-content">
+              <!-- testimonial slider -->
+              <ul class="aa-testimonial-slider">
+                <li>
+                  <div class="aa-testimonial-single">
+                    <div class="aa-testimonial-img">
+                      <img src="./static/img/testimonial-1.png" alt="testimonial img">
+                    </div>
+                    <div class="aa-testimonial-info">
+                      <p>It's been 7 months living in a FindYourPG property. In the starting I faced some issues with this as it was new for me but after knowing the process m happy with the services FindYourPG provides. I suggest this for other people as well. Thanks FindYourPG for hassle free living.</p>
+                    </div>
+                    <div class="aa-testimonial-bio">
+                      <p>Anupam Kalita</p>
+                      <span>Verifed User</span>
+                    </div>
+                  </div>
+                </li>
+                 <li>
+                  <div class="aa-testimonial-single">
+                    <div class="aa-testimonial-img">
+                      <img src="./static/img/testimonial-2.png" alt="testimonial img">
+                    </div>
+                    <div class="aa-testimonial-info">
+                      <p>I had never imagined that I could close down on a house in just a single day. Thanks FindYourPG for the amazing offering!</p>
+                    </div>
+                    <div class="aa-testimonial-bio">
+                      <p>Aditi Garemella</p>
+                      <span>Verifed User</span>
+                    </div>
+                  </div>
+                </li>
+                 <li>
+                  <div class="aa-testimonial-single">
+                    <div class="aa-testimonial-img">
+                      <img src="./static/img/testimonial-3.png" alt="testimonial img">
+                    </div>
+                    <div class="aa-testimonial-info">
+                      <p>FindYourPG actually tries to help it's nesties in every possible way. My experience so far with FindYourPG is very good. I'm totally satisfied with the services. It's value for money too. Thank You for taking care. 😊</p>
+                    </div>
+                    <div class="aa-testimonial-bio">
+                      <p>Davan Muller</p>
+                      <span>Verifed User</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Client Testimonial -->
+
+  <!-- Footer -->
+  <footer id="aa-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+        <div class="aa-footer-area">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="aa-footer-left">
+                <h1><p>FindYour<a rel="nofollow" href="index.html">PG</a></p></h1>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+              <div class="aa-footer-middle">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-google-plus"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12">
+              <div class="aa-footer-right">
+                <a href="index.html">Home</a>
+                <a href="#">Support</a>
+                <a href="#">License</a>
+                <a href="contact.html">Contact</a>
+                <a href="#">Privacy & Term</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </footer>
+  <!-- / Footer -->
+
+
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+            <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+
+            <!-- TODO: Add SDKs for Firebase products that you want to use
+                 https://firebase.google.com/docs/web/setup#available-libraries -->
+            <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+            <script>
+              // Your web app's Firebase configuration
+              // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+              var firebaseConfig = {
+                apiKey: "AIzaSyAhv7JsSyy--RCW-lgGRVxGziRSsT5UvTo",
+                authDomain: "findyourpg0090.firebaseapp.com",
+                databaseURL: "https://findyourpg0090-default-rtdb.firebaseio.com",
+                projectId: "findyourpg0090",
+                storageBucket: "findyourpg0090.appspot.com",
+                messagingSenderId: "783097512154",
+                appId: "1:783097512154:web:183fef12dde68adc82e5e3",
+                measurementId: "G-D7K6ZE38L8"
+              };
+              // Initialize Firebase
+              firebase.initializeApp(firebaseConfig);
+              firebase.analytics();
+            </script>
+
+  <!-- jQuery library -->
+  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+  <script src="./static/js/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="./static/js/bootstrap.js"></script>
+  <!-- slick slider -->
+  <script type="text/javascript" src="./static/js/slick.js"></script>
+  <!-- Price picker slider -->
+  <script type="text/javascript" src="./static/js/nouislider.js"></script>
+   <!-- mixit slider -->
+  <script type="text/javascript" src="./static/js/jquery.mixitup.js"></script>
+  <!-- Add fancyBox -->
+  <script type="text/javascript" src="./static/js/jquery.fancybox.pack.js"></script>
+  <!-- Custom js -->
+  <script src="./static/js/custom.js"></script>
+
+
+  <!-- Location Search Bar -->
+  <!-- <script src="js/suggestions.js"></script> -->
+  <script src="./static/js/script_loc.js"></script>
+
+
+  </body>
+</html>

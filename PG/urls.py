@@ -1,0 +1,13 @@
+from django.contrib import admin
+from django.urls import path
+
+from PG.views import PG_Views
+
+urlpatterns = [
+    path('',PG_Views().homepage,name='home'),
+    path('login/', PG_Views().loginpage, name='login'),
+    path('signup/', PG_Views().signuppage, name='signup'),
+    path('properties/', PG_Views().properties, name='property'),
+    path('properties_details/', PG_Views().properties_details, name='property_details'),
+    path('admin/', admin.site.urls),
+]
