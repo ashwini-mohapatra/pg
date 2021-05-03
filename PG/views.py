@@ -1,3 +1,4 @@
+from django.http import response, HttpResponse
 from django.shortcuts import render, redirect
 
 
@@ -8,6 +9,7 @@ from PG.models import Users, Properties
 class PG_Views:
 
     def homepage(self,request):
+        # ab = HttpResponse.COOKIES.get('login_status', 0)
         if request.method == 'GET':
             location = request.GET.get('location','')
             type1 = request.GET.get('type1','')
@@ -30,8 +32,10 @@ class PG_Views:
             var2 = request.POST.get('password', '')
             objects = Users.objects.all().filter(email_id=var1 ,password=var2)
             if objects is None:
-                print('Login Failure')
+                # HttpResponse.set_cookies('login_status', 0)
+                return redirect('/login')
             else:
+                # HttpResponse.set_cookies('login_status', 1)
                 return redirect('/')
         return render(request,'./login.html')
 
@@ -44,7 +48,11 @@ class PG_Views:
             if var0 != '':
                 add = Users(name=var0, password=var2, email_id=var3, profile='')
                 add.save()
-            return redirect('/')
+                # HttpResponse.set_cookies('login_status', 1)
+                return redirect('/')
+            else:
+                # HttpResponse.set_cookies('login_status', 0)
+                return redirect('/signup')
         return render(request,'./signup.html')
 
     def properties(self,request):
