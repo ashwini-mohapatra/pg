@@ -3,40 +3,40 @@
 
 <head>
     {% load static %}
-  <meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FindYourPG | Properties Details</title>
 
     <!-- Favicon -->
-  <link rel="shortcut icon" href="./static/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
 
-  <!-- Font awesome -->
-  <link href="./static/css/font-awesome.css" rel="stylesheet">
-  <!-- Bootstrap -->
-  <link href="./static/css/bootstrap.css" rel="stylesheet">
-  <!-- slick slider -->
-  <link rel="stylesheet" type="text/css" href="./static/css/slick.css">
-  <!-- price picker slider -->
-  <link rel="stylesheet" type="text/css" href="./static/css/nouislider.css">
-  <!-- Fancybox slider -->
-  <link rel="stylesheet" href="./static/css/jquery.fancybox.css" type="text/css" media="screen" />
-  <!-- Theme color -->
-  <link id="switcher" href="./static/css/theme-color/default-theme.css" rel="stylesheet">
+    <!-- Font awesome -->
+    <link href="/static/css/font-awesome.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="/static/css/bootstrap.css" rel="stylesheet">
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="/static/css/slick.css">
+    <!-- price picker slider -->
+    <link rel="stylesheet" type="text/css" href="/static/css/nouislider.css">
+    <!-- Fancybox slider -->
+    <link rel="stylesheet" href="/static/css/jquery.fancybox.css" type="text/css" media="screen" />
+    <!-- Theme color -->
+    <link id="switcher" href="/static/css/theme-color/default-theme.css" rel="stylesheet">
 
-  <!-- Main style sheet -->
-  <link href="./static/css/style.css" rel="stylesheet">
+    <!-- Main style sheet -->
+    <link href="/static/css/style.css" rel="stylesheet">
 
 
-  <!-- Google Font -->
-  <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!-- Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
 
 </head>
 
 <body class="aa-price-range">
-  {% load static %}
+    {% load static %}
     <div id="aa-preloader-area">
         <div class="pulse"></div>
     </div>
@@ -272,71 +272,73 @@
                 <div class="col-md-4">
                     <aside class="aa-properties-sidebar">
                         <!-- Start Single properties sidebar -->
-            <div class="aa-properties-single-sidebar">
-                <h3>Properties Search</h3>
-                <form action="">
-                  <div class="aa-single-advance-search">
-                    <div class="wrapper">
-                      <div class="search-input">
-                        <input class="input" type="text" placeholder="Type Your Location">
-                        <div class="autocom-box">
-                          <li>Mumbai, Maharashtra</li>
-                          <li>Gurgaon, Delhi</li>
-                          <li>Baga Beach, Goa</li>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="aa-single-advance-search">
-                    <select id="" name="">
-                      <option selected="" value="0">Category</option>
-                      <option value="1">Single</option>
-                      <option value="2">Double Sharing</option>
-                      <option value="3">Triple Sharing</option>
-                      <!-- <option value="4">Commercial</option> -->
-                    </select>
-                  </div>
-                  <div class="aa-single-advance-search">
-                    <select id="" name="">
-                      <option selected="" value="0">Type</option>
-                      <option value="1">Girls Only</option>
-                      <option value="2">Boys Only</option>
-                      <option value="3">Mixed</option>
-                      <!-- <option value="4">AC Without Balcony</option>  -->
-                    </select>
-                  </div>
-                  <div class="aa-single-advance-search">
-                    <select id="" name="">
-                      <option selected="" value="0">Type</option>
-                      <option value="1">AC</option>
-                      <option value="2">Non-AC</option>
-                      <!-- <option value="3">Plot</option>
+                        <div class="aa-properties-single-sidebar">
+                            <h3>Properties Search</h3>
+                            <form action="">
+                                <div class="aa-single-advance-search">
+                                    <div class="wrapper">
+                                        <div class="search-input">
+                                            <input class="input" type="text" placeholder="Type Your Location">
+                                            <div class="autocom-box">
+                                                <li>Mumbai, Maharashtra</li>
+                                                <li>Gurgaon, Delhi</li>
+                                                <li>Baga Beach, Goa</li>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="aa-single-advance-search">
+                                    <select id="" name="">
+                                        <option selected="" value="0">Category</option>
+                                        <option value="1">Single</option>
+                                        <option value="2">Double Sharing</option>
+                                        <option value="3">Triple Sharing</option>
+                                        <!-- <option value="4">Commercial</option> -->
+                                    </select>
+                                </div>
+                                <div class="aa-single-advance-search">
+                                    <select id="" name="">
+                                        <option selected="" value="0">Type</option>
+                                        <option value="1">Girls Only</option>
+                                        <option value="2">Boys Only</option>
+                                        <option value="3">Mixed</option>
+                                        <!-- <option value="4">AC Without Balcony</option>  -->
+                                    </select>
+                                </div>
+                                <div class="aa-single-advance-search">
+                                    <select id="" name="">
+                                        <option selected="" value="0">Type</option>
+                                        <option value="1">AC</option>
+                                        <option value="2">Non-AC</option>
+                                        <!-- <option value="3">Plot</option>
                       <option value="4">Commercial</option> -->
-                    </select>
-                  </div>
-                  <div class="aa-single-filter-search">
-                    <span>No.of Rooms</span>
-                    <span>from</span>
-                    <span id="skip-value-lower" class="example-val">2</span>
-                    <span>TO</span>
-                    <span id="skip-value-upper" class="example-val">7</span>
-                    <div id="aa-sqrfeet-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                    </div>
-                  </div>
-                  <div class="aa-single-filter-search">
-                    <span>PRICE(₹)</span>
-                    <span>FROM</span>
-                    <span id="skip-value-lower2" class="example-val">200.00</span>
-                    <span>TO</span>
-                    <span id="skip-value-upper2" class="example-val">700.00</span>
-                    <div id="aa-price-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                    </div>
-                  </div>
-                  <div class="aa-single-advance-search">
-                    <input type="submit" value="Search" class="aa-search-btn">
-                  </div>
-                </form>
-              </div>
+                                    </select>
+                                </div>
+                                <div class="aa-single-filter-search">
+                                    <span>No.of Rooms</span>
+                                    <span>from</span>
+                                    <span id="skip-value-lower" class="example-val">2</span>
+                                    <span>TO</span>
+                                    <span id="skip-value-upper" class="example-val">7</span>
+                                    <div id="aa-sqrfeet-range"
+                                        class="noUi-target noUi-ltr noUi-horizontal noUi-background">
+                                    </div>
+                                </div>
+                                <div class="aa-single-filter-search">
+                                    <span>PRICE(₹)</span>
+                                    <span>FROM</span>
+                                    <span id="skip-value-lower2" class="example-val">200.00</span>
+                                    <span>TO</span>
+                                    <span id="skip-value-upper2" class="example-val">700.00</span>
+                                    <div id="aa-price-range"
+                                        class="noUi-target noUi-ltr noUi-horizontal noUi-background">
+                                    </div>
+                                </div>
+                                <div class="aa-single-advance-search">
+                                    <input type="submit" value="Search" class="aa-search-btn">
+                                </div>
+                            </form>
+                        </div>
                         <!-- Start Single properties sidebar -->
                         <div class="aa-properties-single-sidebar">
                             <h3>Popular Properties</h3>
@@ -393,7 +395,9 @@
                         <div class="row">
                             <div class="col-md-3 col-sm-6 col-xs-12">
                                 <div class="aa-footer-left">
-                                    <h1><p>FindYour<a rel="nofollow" href="">PG</a></p></h1>
+                                    <h1>
+                                        <p>FindYour<a rel="nofollow" href="">PG</a></p>
+                                    </h1>
                                 </div>
                             </div>
                             <div class="col-md-3 col-sm-6 col-xs-12">
@@ -422,24 +426,24 @@
     <!-- / Footer -->
 
     <!-- jQuery library -->
-  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-  <script src="./static/js/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="./static/js/bootstrap.js"></script>
-  <!-- slick slider -->
-  <script type="text/javascript" src="./static/js/slick.js"></script>
-  <!-- Price picker slider -->
-  <script type="text/javascript" src="./static/js/nouislider.js"></script>
-  <!-- mixit slider -->
-  <script type="text/javascript" src="./static/js/jquery.mixitup.js"></script>
-  <!-- Add fancyBox -->
-  <script type="text/javascript" src="./static/js/jquery.fancybox.pack.js"></script>
-  <!-- Custom js -->
-  <script src="./static/js/custom.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <script src="/static/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/static/js/bootstrap.js"></script>
+    <!-- slick slider -->
+    <script type="text/javascript" src="/static/js/slick.js"></script>
+    <!-- Price picker slider -->
+    <script type="text/javascript" src="/static/js/nouislider.js"></script>
+    <!-- mixit slider -->
+    <script type="text/javascript" src="/static/js/jquery.mixitup.js"></script>
+    <!-- Add fancyBox -->
+    <script type="text/javascript" src="/static/js/jquery.fancybox.pack.js"></script>
+    <!-- Custom js -->
+    <script src="/static/js/custom.js"></script>
 
 
-  <!-- Location Search Bar -->
-  <!-- <script src="js/suggestions.js"></script> -->
-  <script src="./static/js/script_loc.js"></script>
+    <!-- Location Search Bar -->
+    <!-- <script src="js/suggestions.js"></script> -->
+    <script src="./static/js/script_loc.js"></script>
 
 </body>
