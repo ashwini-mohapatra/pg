@@ -6,7 +6,7 @@ from PG.views import PG_Views
 from PGAccomodation import settings
 
 urlpatterns = [
-    path('',PG_Views().homepage,name='home'),
+    path('/',PG_Views().homepage,name='home'),
     path('login/', PG_Views().loginpage, name='login'),
     path('signup/', PG_Views().signuppage, name='signup'),
     path('properties/', PG_Views().properties, name='property'),
