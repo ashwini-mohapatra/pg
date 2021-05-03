@@ -1,7 +1,9 @@
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 
 from PG.views import PG_Views
+from PGAccomodation import settings
 
 urlpatterns = [
     path('',PG_Views().homepage,name='home'),
@@ -13,3 +15,4 @@ urlpatterns = [
     path('forgotpass/', PG_Views().forgotpass,name='forgotpass'),
     path('admin/', admin.site.urls),
 ]
+urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
