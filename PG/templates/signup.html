@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
- {% load static %}
-   <meta charset="UTF-8">
+  {% load static %}
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>FindYourPG | Sign Up</title>
-  <link rel="stylesheet" href="./static/css/login.css">
+  <link rel="stylesheet" href="/static/css/login.css">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="./static/img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
 
   <!-- Font awesome -->
-  <link href="./static/css/font-awesome.css" rel="stylesheet">
+  <link href="/static/css/font-awesome.css" rel="stylesheet">
   <!-- Bootstrap -->
-  <link href="./static/css/bootstrap.css" rel="stylesheet">
+  <link href="/static/css/bootstrap.css" rel="stylesheet">
   <!-- slick slider -->
-  <link rel="stylesheet" type="text/css" href="./static/css/slick.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/slick.css">
   <!-- price picker slider -->
-  <link rel="stylesheet" type="text/css" href="./static/css/nouislider.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/nouislider.css">
   <!-- Fancybox slider -->
-  <link rel="stylesheet" href="./static/css/jquery.fancybox.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="/static/css/jquery.fancybox.css" type="text/css" media="screen" />
   <!-- Theme color -->
-  <link id="switcher" href="./static/css/theme-color/default-theme.css" rel="stylesheet">
+  <link id="switcher" href="/static/css/theme-color/default-theme.css" rel="stylesheet">
 
   <!-- Main style sheet -->
-  <link href="./static/css/style.css" rel="stylesheet">
+  <link href="/static/css/style.css" rel="stylesheet">
 
 
   <!-- Google Font -->
@@ -118,90 +119,92 @@
   <!-- End menu section -->
 
 
-</head>
-<body>
+  </head>
+
+  <body>
     <div class="container" id="container">
-        <div class="form-container sign-in-container">
-            <form action="" method="post">
-                {% csrf_token %}
-                <h1>Create Account</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                </div>
-                <span>or use your email for registration</span><br>
-                <input type="text" placeholder="Name" id="name1" name="name"/>
-                <br>
-                <input type="email" placeholder="Email" id="email1" name="email"/>
-                <br>
-                <input type="password" placeholder="Password" id="password1" name="password"/>
-                <br>
-                <button id="signup" type="submit">Sign Up</button>
-            </form>
+      <div class="form-container sign-in-container">
+        <form action="" method="post">
+          {% csrf_token %}
+          <h1>Create Account</h1>
+          <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          </div>
+          <span>or use your email for registration</span><br>
+          <input type="text" placeholder="Name" id="name1" name="name" />
+          <br>
+          <input type="email" placeholder="Email" id="email1" name="email" />
+          <br>
+          <input type="password" placeholder="Password" id="password1" name="password" />
+          <br>
+          <button id="signup" type="submit">Sign Up</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-right">
+            <h1>Welcome Back!</h1>
+            <p>To continue booking please login with your personal infomation.</p>
+            <button class="ghost" id="signIn"><a href="/login">Login</a></button>
+          </div>
         </div>
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-right">
-                    <h1>Welcome Back!</h1>
-                    <p>To continue booking please login with your personal infomation.</p>
-                    <button class="ghost" id="signIn"><a href="/login">Login</a></button>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
 
-            <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyAhv7JsSyy--RCW-lgGRVxGziRSsT5UvTo",
-    authDomain: "findyourpg0090.firebaseapp.com",
-    databaseURL: "https://findyourpg0090-default-rtdb.firebaseio.com",
-    projectId: "findyourpg0090",
-    storageBucket: "findyourpg0090.appspot.com",
-    messagingSenderId: "783097512154",
-    appId: "1:783097512154:web:183fef12dde68adc82e5e3",
-    measurementId: "G-D7K6ZE38L8"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyAhv7JsSyy--RCW-lgGRVxGziRSsT5UvTo",
+        authDomain: "findyourpg0090.firebaseapp.com",
+        databaseURL: "https://findyourpg0090-default-rtdb.firebaseio.com",
+        projectId: "findyourpg0090",
+        storageBucket: "findyourpg0090.appspot.com",
+        messagingSenderId: "783097512154",
+        appId: "1:783097512154:web:183fef12dde68adc82e5e3",
+        measurementId: "G-D7K6ZE38L8"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
 
     <!-- jQuery library -->
-  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-  <script src="./static/js/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="./static/js/bootstrap.js"></script>
-  <!-- slick slider -->
-  <script type="text/javascript" src="./static/js/slick.js"></script>
-  <!-- Price picker slider -->
-  <script type="text/javascript" src="./static/js/nouislider.js"></script>
-  <!-- mixit slider -->
-  <script type="text/javascript" src="./static/js/jquery.mixitup.js"></script>
-  <!-- Add fancyBox -->
-  <script type="text/javascript" src="./static/js/jquery.fancybox.pack.js"></script>
-  <!-- Custom js -->
-  <script src="./static/js/custom.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <script src="/static/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/static/js/bootstrap.js"></script>
+    <!-- slick slider -->
+    <script type="text/javascript" src="/static/js/slick.js"></script>
+    <!-- Price picker slider -->
+    <script type="text/javascript" src="/static/js/nouislider.js"></script>
+    <!-- mixit slider -->
+    <script type="text/javascript" src="/static/js/jquery.mixitup.js"></script>
+    <!-- Add fancyBox -->
+    <script type="text/javascript" src="/static/js/jquery.fancybox.pack.js"></script>
+    <!-- Custom js -->
+    <script src="/static/js/custom.js"></script>
 
-  <script src="./static/js/login.js"></script>
+    <script src="/static/js/login.js"></script>
 
 
-  <!-- Location Search Bar -->
-  <!-- <script src="js/suggestions.js"></script> -->
-  <script src="./static/js/script_loc.js"></script>
+    <!-- Location Search Bar -->
+    <!-- <script src="js/suggestions.js"></script> -->
+    <script src="/static/js/script_loc.js"></script>
 
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="./static/js/signup.js"></script>
+    <script src="/static/https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="/static/js/signup.js"></script>
 
-</body>
+  </body>
+
 </html>
