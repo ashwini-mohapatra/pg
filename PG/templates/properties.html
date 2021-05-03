@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   {% load static %}
   <meta charset="utf-8">
@@ -11,20 +12,20 @@
   <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
 
   <!-- Font awesome -->
-  <link href="./static/css/font-awesome.css" rel="stylesheet">
+  <link href="/static/css/font-awesome.css" rel="stylesheet">
   <!-- Bootstrap -->
-  <link href="./static/css/bootstrap.css" rel="stylesheet">
+  <link href="/static/css/bootstrap.css" rel="stylesheet">
   <!-- slick slider -->
-  <link rel="stylesheet" type="text/css" href="./static/css/slick.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/slick.css">
   <!-- price picker slider -->
-  <link rel="stylesheet" type="text/css" href="./static/css/nouislider.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/nouislider.css">
   <!-- Fancybox slider -->
-  <link rel="stylesheet" href="./static/css/jquery.fancybox.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="/static/css/jquery.fancybox.css" type="text/css" media="screen" />
   <!-- Theme color -->
-  <link id="switcher" href="./static/css/theme-color/default-theme.css" rel="stylesheet">
+  <link id="switcher" href="/static/css/theme-color/default-theme.css" rel="stylesheet">
   <!-- Main style sheet -->
-  <link href="./static/css/style.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <link href="/static/css/style.css" rel="stylesheet">
+  <script src="/static/https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
 
 
   <!-- Google Font -->
@@ -171,8 +172,8 @@
             <!-- Start properties content body -->
             <div class="aa-properties-content-body">
               <ul class="aa-properties-nav" id='propertiesList'>
-                  {% for s in search %}
-                  <li>
+                {% for s in search %}
+                <li>
                   <article class="aa-properties-item">
                     <a class="aa-properties-item-img" href="/properties_details">
                       <img alt="img" src="{{ s.Image1 }}">
@@ -200,7 +201,7 @@
                     </div>
                   </article>
                 </li>
-                  {% endfor %}
+                {% endfor %}
               </ul>
             </div>
             <!-- Start properties content bottom -->
@@ -229,11 +230,11 @@
         </div>
         <!-- Start properties sidebar -->
         <div class="col-md-4">
-        <form action="" method="GET">
-          <aside class="aa-properties-sidebar">
-            <!-- Start Single properties sidebar -->
-            <div class="aa-properties-single-sidebar">
-              <h3>Properties Search</h3>
+          <form action="" method="GET">
+            <aside class="aa-properties-sidebar">
+              <!-- Start Single properties sidebar -->
+              <div class="aa-properties-single-sidebar">
+                <h3>Properties Search</h3>
                 <div class="aa-single-advance-search">
                   <div class="wrapper">
                     <div class="search-input">
@@ -276,58 +277,58 @@
                 <div class="aa-single-advance-search">
                   <input type="submit" id='search' value="Search" class="aa-search-btn">
                 </div>
-              </form>
-            </div>
-            <!-- Start Single properties sidebar -->
-            <div class="aa-properties-single-sidebar">
-              <h3>Popular Properties</h3>
-              <div class="media">
-                <div class="media-left">
-                  <a href="/properties_details">
-                    <img class="media-object"
-                      src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fGJlZHJvb218ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                      alt="img">
-                  </a>
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading"><a href="/properties_details">Sanjay PG </a></h4>
-                  <p>Sharing Rooms for citizens living near dwarka</p>
-                  <span>₹6500/Month</span>
-                </div>
-              </div>
-              <div class="media">
-                <div class="media-left">
-                  <a href="/properties_details">
-                    <img class="media-object"
-                      src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fGJlZHJvb218ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                      alt="img">
-                  </a>
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading"><a href="/properties_details">Balendu PG</a></h4>
-                  <p>Sharing Rooms for citizens living near dwarka</p>
-                  <span>₹5500/Month</span>
-                </div>
-              </div>
-              <div class="media">
-                <div class="media-left">
-                  <a href="/properties_details">
-                    <img class="media-object"
-                      src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fGJlZHJvb218ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-                      alt="img">
-                  </a>
-                </div>
-                <div class="media-body">
-                  <h4 class="media-heading"><a href="/properties_details">Ramesh PG</a></h4>
-                  <p>Sharing Rooms for citizens living near dwarka</p>
-                  <span>₹5000/Month</span>
-                </div>
-              </div>
-            </div>
-          </aside>
+          </form>
         </div>
-      </form>
+        <!-- Start Single properties sidebar -->
+        <div class="aa-properties-single-sidebar">
+          <h3>Popular Properties</h3>
+          <div class="media">
+            <div class="media-left">
+              <a href="/properties_details">
+                <img class="media-object"
+                  src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fGJlZHJvb218ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  alt="img">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading"><a href="/properties_details">Sanjay PG </a></h4>
+              <p>Sharing Rooms for citizens living near dwarka</p>
+              <span>₹6500/Month</span>
+            </div>
+          </div>
+          <div class="media">
+            <div class="media-left">
+              <a href="/properties_details">
+                <img class="media-object"
+                  src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fGJlZHJvb218ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  alt="img">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading"><a href="/properties_details">Balendu PG</a></h4>
+              <p>Sharing Rooms for citizens living near dwarka</p>
+              <span>₹5500/Month</span>
+            </div>
+          </div>
+          <div class="media">
+            <div class="media-left">
+              <a href="/properties_details">
+                <img class="media-object"
+                  src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fGJlZHJvb218ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  alt="img">
+              </a>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading"><a href="/properties_details">Ramesh PG</a></h4>
+              <p>Sharing Rooms for citizens living near dwarka</p>
+              <span>₹5000/Month</span>
+            </div>
+          </div>
+        </div>
+        </aside>
       </div>
+      </form>
+    </div>
     </div>
   </section>
   <!-- / Properties  -->
@@ -341,7 +342,9 @@
             <div class="row">
               <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="aa-footer-left">
-                  <h1><p>FindYour<a rel="nofollow" href="">PG</a></p></h1>
+                  <h1>
+                    <p>FindYour<a rel="nofollow" href="">PG</a></p>
+                  </h1>
                 </div>
               </div>
               <div class="col-md-3 col-sm-6 col-xs-12">
@@ -373,53 +376,53 @@
 
   <!-- jQuery library -->
   <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-  <script src="./static/js/jquery.min.js"></script>
+  <script src="/static/js/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="./static/js/bootstrap.js"></script>
+  <script src="/static/js/bootstrap.js"></script>
   <!-- slick slider -->
-  <script type="text/javascript" src="./static/js/slick.js"></script>
+  <script type="text/javascript" src="/static/js/slick.js"></script>
   <!-- Price picker slider -->
-  <script type="text/javascript" src="./static/js/nouislider.js"></script>
+  <script type="text/javascript" src="/static/js/nouislider.js"></script>
   <!-- mixit slider -->
-  <script type="text/javascript" src="./static/js/jquery.mixitup.js"></script>
+  <script type="text/javascript" src="/static/js/jquery.mixitup.js"></script>
   <!-- Add fancyBox -->
-  <script type="text/javascript" src="./static/js/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/static/js/jquery.fancybox.pack.js"></script>
   <!-- Custom js -->
-  <script src="./static/js/custom.js"></script>
+  <script src="/static/js/custom.js"></script>
 
 
   <!-- Location Search Bar -->
   <!-- <script src="js/suggestions.js"></script> -->
-  <script src="./static/js/script_loc.js"></script>
-      <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+  <script src="/static/js/script_loc.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+  <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyAhv7JsSyy--RCW-lgGRVxGziRSsT5UvTo",
-    authDomain: "findyourpg0090.firebaseapp.com",
-    databaseURL: "https://findyourpg0090-default-rtdb.firebaseio.com",
-    projectId: "findyourpg0090",
-    storageBucket: "findyourpg0090.appspot.com",
-    messagingSenderId: "783097512154",
-    appId: "1:783097512154:web:183fef12dde68adc82e5e3",
-    measurementId: "G-D7K6ZE38L8"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
-  <script src="./static/js/properties.js"></script>
-  <script src="./static/js/property_filtering.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyAhv7JsSyy--RCW-lgGRVxGziRSsT5UvTo",
+      authDomain: "findyourpg0090.firebaseapp.com",
+      databaseURL: "https://findyourpg0090-default-rtdb.firebaseio.com",
+      projectId: "findyourpg0090",
+      storageBucket: "findyourpg0090.appspot.com",
+      messagingSenderId: "783097512154",
+      appId: "1:783097512154:web:183fef12dde68adc82e5e3",
+      measurementId: "G-D7K6ZE38L8"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <script src="/static/js/properties.js"></script>
+  <script src="/static/js/property_filtering.js"></script>
 </body>
 
 </html>
