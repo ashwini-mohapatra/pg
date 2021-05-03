@@ -122,19 +122,20 @@
 <body>
     <div class="container" id="container">
         <div class="form-container sign-in-container">
-            <form action="#">
+            <form action="" method="post">
+                {% csrf_token %}
                 <h1>Create Account</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                 </div>
                 <span>or use your email for registration</span><br>
-                <input type="text" placeholder="Name" id="name1"/>
+                <input type="text" placeholder="Name" id="name1" name="name"/>
                 <br>
-                <input type="email" placeholder="Email" id="email1"/>
+                <input type="email" placeholder="Email" id="email1" name="email"/>
                 <br>
-                <input type="password" placeholder="Password" id="password1"/>
+                <input type="password" placeholder="Password" id="password1" name="password"/>
                 <br>
-                <button id="signup">Sign Up</button>
+                <button id="signup" type="submit">Sign Up</button>
             </form>
         </div>
         <div class="overlay-container">

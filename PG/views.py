@@ -12,9 +12,9 @@ class PG_Views:
 
     def loginpage(self,request):
         if request.method == 'POST':
-            var1 = request.POST.get('username', '')
+            var1 = request.POST.get('email', '')
             var2 = request.POST.get('password', '')
-            objects = Users.objects.all().filter(username=var1 ,password=var2)
+            objects = Users.objects.all().filter(email_id=var1 ,password=var2)
             if objects is None:
                 print('Login Failure')
             else:
@@ -24,13 +24,13 @@ class PG_Views:
     def signuppage(self,request):
         if request.method == 'POST':
             var0 = request.POST.get('name', '')
-            var1 = request.POST.get('username', '')
+            # var1 = request.POST.get('username', '')
             var2 = request.POST.get('password', '')
-            var3 = request.POST.get('email_id', '')
+            var3 = request.POST.get('email', '')
             if var0 != '':
-                add = Users(name=var0, username=var1, password=var2, email_id=var3,profile='')
+                add = Users(name=var0, password=var2, email_id=var3, profile='')
                 add.save()
-            return redirect('')
+            return redirect('/')
         return render(request,'./signup.html')
 
     def properties(self,request):

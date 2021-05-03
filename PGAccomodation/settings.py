@@ -75,22 +75,25 @@ WSGI_APPLICATION = 'PGAccomodation.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 DATABASES = {
-   'default': {
-       'ENGINE': 'djongo',
-       'NAME': 'PGAccomodation',
-       'USER': 'pgaccomodation',
-       'PASSWORD': 'Y1jhiCFRN3posJvY',
-       'HOST': 'mongodb+srv://pgaccomodation:Y1jhiCFRN3posJvY@cluster0.kt4p1.mongodb.net/PGDB?retryWrites'
-                '=true&w=majority',
-   }
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'u613044363_PG',
+        'USER': 'u613044363_pg',
+        'PASSWORD': 'Aa123456789',
+        'HOST': 'sql348.main-hosting.eu',
+    }
 }
+# DATABASES = {
+#    'default': {
+#        'ENGINE': 'djongo',
+#        'NAME': 'PGAccomodation',
+#        'USER': 'pgaccomodation',
+#        'PASSWORD': 'Y1jhiCFRN3posJvY',
+#        'HOST': 'mongodb+srv://pgaccomodation:Y1jhiCFRN3posJvY@cluster0.kt4p1.mongodb.net/PGDB?retryWrites'
+#                 '=true&w=majority',
+#    }
+# }
 
 
 # Password validation
