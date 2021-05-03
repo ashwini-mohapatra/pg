@@ -249,3 +249,97 @@ input {
   width: 40px;
 }
 
+/*==================
+ HEADER SECTION
+====================*/
+
+#aa-header {
+  border-bottom: 1px solid #fff;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+#aa-header .aa-header-area {
+  display: inline;
+  padding: 5px 0;
+  float: left;
+  width: 100%;
+}
+#aa-header .aa-header-area .aa-header-left {
+  display: inline;
+  float: left;
+  width: 100%;
+}
+#aa-header .aa-header-area .aa-header-left .aa-telephone-no {
+  color: #fff;
+  float: left;
+  font-size: 15px;
+}
+#aa-header .aa-header-area .aa-header-left .aa-telephone-no span {
+  margin-right: 5px;
+}
+#aa-header .aa-header-area .aa-header-left .aa-telephone-no span .skype_c2c_logo_img {
+  display: none !important;
+}
+#aa-header .aa-header-area .aa-header-left .aa-telephone-no .skype_c2c_text_span {
+  color: #fff !important;
+}
+#aa-header .aa-header-area .aa-header-left .aa-email {
+  color: #fff;
+  float: left;
+  letter-spacing: 0.5px;
+  margin-left: 20px;
+  font-size: 15px;
+}
+#aa-header .aa-header-area .aa-header-left .aa-email span {
+  margin-right: 5px;
+}
+#aa-header .aa-header-area .aa-header-right {
+  display: inline;
+  float: left;
+  width: 100%;
+  text-align: right;
+}
+#aa-header .aa-header-area .aa-header-right .aa-register {
+  border-right: 1px solid #f8f8f8;
+  color: #fff;
+  margin-right: 5px;
+  padding-right: 10px;
+  font-size: 20px;
+}
+#aa-header .aa-header-area .aa-header-right .aa-login {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+/*==================
+ NAVBAR SECTION
+====================*/
+
+ #aa-menu-area {
+  left: 0;
+  padding-top: 63px;
+  position: absolute;
+  right: 0;
+  top: 35px;
+  width: 100%;
+  z-index: 999;
+
+}
+
+
+#aa-menu-area .main-navbar .navbar-header .aa-logo {
+  border: 2px solid #fff;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  padding: 15px;
+  line-height: 13px;
+  margin-left: 18%;
+  margin-top: 50%;
+}
+
