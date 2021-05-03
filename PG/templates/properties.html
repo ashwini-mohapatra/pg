@@ -171,35 +171,36 @@
             <!-- Start properties content body -->
             <div class="aa-properties-content-body">
               <ul class="aa-properties-nav" id='propertiesList'>
-                <li v-for="item in properties" :key="item['Property Name']" >
+                  {% for s in search %}
+                  <li>
                   <article class="aa-properties-item">
                     <a class="aa-properties-item-img" href="/properties_details">
-                      <img alt="img"
-                        v-bind:src="item['Images Link']">
+                      <img alt="img" src="{{ s.Image1 }}">
                     </a>
                     <div class="aa-properties-item-content">
                       <div class="aa-properties-info">
-                        <span>Category: {{item['Category']}}</span> <br>
-                        <span>No of Rooms: {{item['No of Rooms']}}</span>
-                        <span>No of Beds: {{item['No of Beds']}}</span> <br>
-                        <span>Type: {{item['Type1']}}</span>
-                        <span>Type: {{item['Type2']}}</span>
+                        <span>Category: {{s.Category}}</span> <br>
+                        <span>No of Rooms: {{s.No_Of_Rooms}}</span>
+                        <span>No of Beds: {{s.No_Of_Beds}}</span> <br>
+                        <span>Type: {{s.Type1}}</span>
+                        <span>Type: {{s.Type2}}</span>
                         <!-- <span>1100 SQ FT</span> -->
                       </div>
                       <div class="aa-properties-about">
-                        <h3><a href="/properties_details"> {{item['Property Name']}}</a></h3>
-                        <p>{{item['Location']}}</p>
-                        <p>{{item['Property Description']}}</p>
+                        <h3><a href="/properties_details"> {{s.Property_Name}}</a></h3>
+                        <p>{{s.Property_Location_City}}</p>
+                        <p>{{s.Property_Description}}</p>
                       </div>
                       <div class="aa-properties-detial">
                         <span class="aa-price">
-                          ₹{{item['Rent']}}/Month
+                          ₹{{s.Rent}}/Month
                         </span>
                         <a class="aa-secondary-btn" href="/properties_details">View Details</a>
                       </div>
                     </div>
                   </article>
                 </li>
+                  {% endfor %}
               </ul>
             </div>
             <!-- Start properties content bottom -->
@@ -228,7 +229,7 @@
         </div>
         <!-- Start properties sidebar -->
         <div class="col-md-4">
-        <form action="/properties" method="GET">
+        <form action="" method="GET">
           <aside class="aa-properties-sidebar">
             <!-- Start Single properties sidebar -->
             <div class="aa-properties-single-sidebar">
@@ -246,7 +247,7 @@
                   </div>
                 </div>
                 <div class="aa-single-advance-search">
-                  <select id="" name="">
+                  <select id="" name="category">
                     <option selected="" value="0">Category</option>
                     <option value="1">Single</option>
                     <option value="2">Double Sharing</option>
@@ -255,7 +256,7 @@
                   </select>
                 </div>
                 <div class="aa-single-advance-search">
-                  <select id="" name="">
+                  <select id="" name="type1">
                     <option selected="" value="0">Type</option>
                     <option value="1">Girls Only</option>
                     <option value="2">Boys Only</option>
@@ -264,31 +265,13 @@
                   </select>
                 </div>
                 <div class="aa-single-advance-search">
-                  <select id="" name="">
+                  <select id="" name="type2">
                     <option selected="" value="0">Type</option>
                     <option value="1">AC</option>
                     <option value="2">Non-AC</option>
                     <!-- <option value="3">Plot</option>
                     <option value="4">Commercial</option> -->
                   </select>
-                </div>
-                <div class="aa-single-filter-search">
-                  <span>No.of Rooms</span>
-                  <span>from</span>
-                  <span id="skip-value-lower" class="example-val">2</span>
-                  <span>TO</span>
-                  <span id="skip-value-upper" class="example-val">7</span>
-                  <div id="aa-sqrfeet-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                  </div>
-                </div>
-                <div class="aa-single-filter-search">
-                  <span>PRICE</span>
-                  <span>FROM</span>
-                  <span id="skip-value-lower2" class="example-val">200.00</span>
-                  <span>TO</span>
-                  <span id="skip-value-upper2" class="example-val">700.00</span>
-                  <div id="aa-price-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                  </div>
                 </div>
                 <div class="aa-single-advance-search">
                   <input type="submit" id='search' value="Search" class="aa-search-btn">

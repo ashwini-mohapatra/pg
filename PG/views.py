@@ -2,12 +2,26 @@ from django.shortcuts import render, redirect
 
 
 # Create your views here.
-from PG.models import Users
+from PG.models import Users, Properties
 
 
 class PG_Views:
 
     def homepage(self,request):
+        if request.method == 'GET':
+            location = request.GET.get('location','')
+            type1 = request.GET.get('type1','')
+            category = request.GET.get('category','')
+            type2 = request.GET.get('type2','')
+            if location != '':
+                search = Properties.objects.all()
+                if type1 != '':
+                    search = search.filter(Type1=type1)
+                if type2 != '':
+                    search = search.filter(Type2=type2)
+                if category != '':
+                    search = search.filter(Category=category)
+                return redirect('/properties',{'search':search})
         return render(request,'./index.html')
 
     def loginpage(self,request):
@@ -18,7 +32,7 @@ class PG_Views:
             if objects is None:
                 print('Login Failure')
             else:
-                return redirect('')
+                return redirect('/')
         return render(request,'./login.html')
 
     def signuppage(self,request):
@@ -34,9 +48,23 @@ class PG_Views:
         return render(request,'./signup.html')
 
     def properties(self,request):
+        if request.method == 'GET':
+            location = request.GET.get('location', '')
+            type1 = request.GET.get('type1', '')
+            category = request.GET.get('category', '')
+            type2 = request.GET.get('type2', '')
+            if location != '':
+                search = Properties.objects.all()
+                if type1 != '':
+                    search = search.filter(Type1=type1)
+                if type2 != '':
+                    search = search.filter(Type2=type2)
+                if category != '':
+                    search = search.filter(Category=category)
+                return redirect('/properties', {'search': search})
         return render(request,'./properties.html')
 
-    def properties_details(self,request,location,category,type1,type2):
+    def properties_details(self,request):
         return render(request,'./properties_details.html')
 
     def contactspage(self,request):
