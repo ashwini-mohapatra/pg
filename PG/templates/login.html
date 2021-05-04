@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   {% load static %}
-
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>FindYourPG | Login</title>
-
-
+  <title>FindYourPG | Sign Up</title>
   <link rel="stylesheet" href="/static/css/login.css">
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="./static/img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
 
   <!-- Font awesome -->
-  <link href="./static/css/font-awesome.css" rel="stylesheet">
+  <link href="/static/css/font-awesome.css" rel="stylesheet">
   <!-- Bootstrap -->
-  <link href="./static/css/bootstrap.css" rel="stylesheet">
+  <link href="/static/css/bootstrap.css" rel="stylesheet">
   <!-- slick slider -->
-  <link rel="stylesheet" type="text/css" href="./static/css/slick.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/slick.css">
   <!-- price picker slider -->
-  <link rel="stylesheet" type="text/css" href="./static/css/nouislider.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/nouislider.css">
   <!-- Fancybox slider -->
-  <link rel="stylesheet" href="./static/css/jquery.fancybox.css" type="text/css" media="screen" />
+  <link rel="stylesheet" href="/static/css/jquery.fancybox.css" type="text/css" media="screen" />
   <!-- Theme color -->
-  <link id="switcher" href="./static/css/theme-color/default-theme.css" rel="stylesheet">
+  <link id="switcher" href="/static/css/theme-color/default-theme.css" rel="stylesheet">
 
   <!-- Main style sheet -->
-  <link href="./static/css/style.css" rel="stylesheet">
+  <link href="/static/css/style.css" rel="stylesheet">
 
 
   <!-- Google Font -->
@@ -39,9 +37,8 @@
 </head>
 
 <body class="aa-price-range">
-{% load static %}
-
-<!-- Pre Loader -->
+  {% load static %}
+  <!-- Pre Loader -->
   <div id="aa-preloader-area">
     <div class="pulse"></div>
   </div>
@@ -70,9 +67,8 @@
               </div>
               <div class="col-md-6 col-sm-6 col-xs-6">
                 <div class="aa-header-right">
-                  <a href="/PG/templates/index.html" class="aa-register">Home</a>
-                  <a href="/PG/templates/properties.html" class="aa-register">Properties</a>
-                  <a href="/PG/templates/contact.html" class="aa-login">Contact</a>
+                  <a href="/signup" class="aa-register">Sign Up</a>
+                  <a href="/login" class="aa-login">Login</a>
                 </div>
               </div>
             </div>
@@ -87,96 +83,126 @@
     <nav class="navbar navbar-default main-navbar" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          
+          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+            aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- LOGO -->
           <!-- Text based logo -->
-          <a class="navbar-brand aa-logo" href="/"> FindYour<span>PG</span></a>
+          <a class="navbar-brand aa-logo" href=""> FindYour<span>PG</span></a>
+          <!-- Image based logo -->
+          <!-- <a class="navbar-brand aa-logo-img" href="index.html"><img src="img/logo.png" alt="logo"></a> -->
         </div>
-        
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
+            <li><a href="/">HOME</a></li>
+            <li class="dropdown active">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="/properties">PROPERTIES <span
+                  class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="/properties">PROPERTIES</a></li>
+                <li><a href="/properties_details">PROPERTIES DETAIL</a></li>
+              </ul>
+            </li>
+            </li>
+            <li><a href="/contact">CONTACT</a></li>
+          </ul>
+        </div>
+        <!--/.nav-collapse -->
       </div>
     </nav>
   </section>
   <!-- End menu section -->
 
-</head>
-<body>
 
+  </head>
+
+  <body>
     <div class="container" id="container">
-        <div class="form-container sign-in-container">
-            <form action="" method="post">
-                {% csrf_token %}
-                <h1>Login</h1>
-                <div class="social-container">
-                    <a href="#" id="glogin" class="social"><i class="fab fa-google-plus-g"></i></a>
-                </div>
-                <span>or use your account</span> <br>
-                <input id="email" type="email" placeholder="Email" name="email"/> <br>
-                <input id="password" type="password" placeholder="Password" name="password"/>
-                <a href="/forgotpass">Forgot your password?</a>
-                <button id="login" type="submit">Login</button>
-            </form>
-        </div>
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-right">
-                    <h1>Hello!</h1>
-                    <p>Enter your personal details and start your journey with us!</p>
-                        <button class="ghost" id="signUp"><a href="/signup">Sign Up</a></button>
-                </div>
-            </div>
-        </div>
-    </div>
+      <div class="form-container sign-in-container">
+          <form action="" method="post">
+              {% csrf_token %}
+              <h1>Login</h1>
+              <div class="social-container">
+                  <a href="#" id="glogin" class="social"><i class="fab fa-google-plus-g"></i></a>
+              </div>
+              <span>or use your account</span> <br>
+              <input id="email" type="email" placeholder="Email" name="email"/> <br>
+              <input id="password" type="password" placeholder="Password" name="password"/>
+              <a href="/forgotpass">Forgot your password?</a>
+              <button id="login" type="submit">Login</button>
+          </form>
+      </div>
+      <div class="overlay-container">
+          <div class="overlay">
+              <div class="overlay-panel overlay-right">
+                  <h1>Hello!</h1>
+                  <p>Enter your personal details and start your journey with us!</p>
+                      <button class="ghost" id="signUp"><a href="/signup">Sign Up</a></button>
+              </div>
+          </div>
+      </div>
+  </div>
 
 
-            <!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyAhv7JsSyy--RCW-lgGRVxGziRSsT5UvTo",
-    authDomain: "findyourpg0090.firebaseapp.com",
-    databaseURL: "https://findyourpg0090-default-rtdb.firebaseio.com",
-    projectId: "findyourpg0090",
-    storageBucket: "findyourpg0090.appspot.com",
-    messagingSenderId: "783097512154",
-    appId: "1:783097512154:web:183fef12dde68adc82e5e3",
-    measurementId: "G-D7K6ZE38L8"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
+    <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyAhv7JsSyy--RCW-lgGRVxGziRSsT5UvTo",
+        authDomain: "findyourpg0090.firebaseapp.com",
+        databaseURL: "https://findyourpg0090-default-rtdb.firebaseio.com",
+        projectId: "findyourpg0090",
+        storageBucket: "findyourpg0090.appspot.com",
+        messagingSenderId: "783097512154",
+        appId: "1:783097512154:web:183fef12dde68adc82e5e3",
+        measurementId: "G-D7K6ZE38L8"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
 
     <!-- jQuery library -->
-  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-  <script src="./static/js/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="./static/js/bootstrap.js"></script>
-  <!-- slick slider -->
-  <script type="text/javascript" src="./static/js/slick.js"></script>
-  <!-- Price picker slider -->
-  <script type="text/javascript" src="./static/js/nouislider.js"></script>
-  <!-- mixit slider -->
-  <script type="text/javascript" src="./static/js/jquery.mixitup.js"></script>
-  <!-- Add fancyBox -->
-  <script type="text/javascript" src="./static/js/jquery.fancybox.pack.js"></script>
-  <!-- Custom js -->
-  <script src="./static/js/custom.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <script src="/static/js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="/static/js/bootstrap.js"></script>
+    <!-- slick slider -->
+    <script type="text/javascript" src="/static/js/slick.js"></script>
+    <!-- Price picker slider -->
+    <script type="text/javascript" src="/static/js/nouislider.js"></script>
+    <!-- mixit slider -->
+    <script type="text/javascript" src="/static/js/jquery.mixitup.js"></script>
+    <!-- Add fancyBox -->
+    <script type="text/javascript" src="/static/js/jquery.fancybox.pack.js"></script>
+    <!-- Custom js -->
+    <script src="/static/js/custom.js"></script>
+
+    <script src="/static/js/login.js"></script>
 
 
-  <!-- Location Search Bar -->
-  <!-- <script src="js/suggestions.js"></script> -->
-  <script src="./static/js/script_loc.js"></script>
+    <!-- Location Search Bar -->
+    <!-- <script src="js/suggestions.js"></script> -->
+    <script src="/static/js/script_loc.js"></script>
 
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="./static/js/login.js"></script>
-</body>
+    <script src="/static/https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="/static/js/signup.js"></script>
+
+  </body>
+
 </html>
