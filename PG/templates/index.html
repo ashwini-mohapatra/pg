@@ -66,7 +66,16 @@
                 <div class="aa-header-right">
                   <a href="/signup" class="aa-register">Sign Up</a>
                   <a href="/login" class="aa-login">Login</a>
-                  <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_GtIhlKaB55jbxR" async> </script> </form>
+                  <a class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <img src="http://placehold.it/18x18" class="profile-image img-circle"> Username <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><i class="fa fa-cog"></i> Account</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="fa fa-sign-out"></i> Sign-out</a></li>
+                    </ul>
+                  </a>
+                  
                 </div>
               </div>
             </div>
@@ -97,15 +106,35 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
+            
             <li class="active"><a href="/">HOME</a></li>
-             <li class="dropdown">
+             
+            <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="/properties">PROPERTIES <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/properties">PROPERTIES</a></li>
                 <li><a href="/properties_details">PROPERTIES DETAIL</a></li>
               </ul>
             </li>
+
             <li><a href="/contact">CONTACT</a></li>
+            
+            <li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <img src="http://placehold.it/18x18" class="profile-image img-circle"> Username <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#"><i class="fa fa-cog"></i> Account</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="fa fa-sign-out"></i> Sign-out</a></li>
+                </ul>
+            </li>
+            </li>
+
+            <li>
+              <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_GtIhlKaB55jbxR" async> </script> </form>
+            </li>
+
           </ul>
         </div><!--/.nav-collapse -->
       </div>
