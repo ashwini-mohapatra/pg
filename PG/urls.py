@@ -13,6 +13,7 @@ urlpatterns = [
     path('properties_details/', PG_Views().properties_details, name='property_details'),
     path('contact/', PG_Views().contactspage, name='contacts'),
     path('forgotpass/', PG_Views().forgotpass,name='forgotpass'),
+    # path('profile/',PG_Views().profile,name='profile'),
     path('admin/', admin.site.urls),
 ]
 urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

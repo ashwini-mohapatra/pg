@@ -145,7 +145,7 @@
                                     alt="img">
                                 <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fGJlZHJvb218ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
                                     alt="img">
-                                <img src="./static/img/slider/3.jpg" alt="img">
+                                <img src="/static/img/slider/3.jpg" alt="img">
                             </div>
                             <div class="aa-properties-info">
                                 <h2>Wind Residences cool breeze & amazing tagaytay view</h2>
@@ -205,7 +205,7 @@
                                         <div class="col-md-6">
                                             <article class="aa-properties-item">
                                                 <a class="aa-properties-item-img" href="#">
-                                                    <img alt="img" src="./static/img/item/1.jpg">
+                                                    <img alt="img" src="/static/img/item/1.jpg">
                                                 </a>
                                                 <div class="aa-tag for-sale">
                                                     For Sale
@@ -234,7 +234,7 @@
                                         <div class="col-md-6">
                                             <article class="aa-properties-item">
                                                 <a class="aa-properties-item-img" href="#">
-                                                    <img alt="img" src="img/item/2.jpg">
+                                                    <img alt="img" src="static/img/item/2.jpg">
                                                 </a>
                                                 <div class="aa-tag for-sale">
                                                     For Sale
@@ -274,11 +274,12 @@
                         <!-- Start Single properties sidebar -->
                         <div class="aa-properties-single-sidebar">
                             <h3>Properties Search</h3>
-                            <form action="">
+                            <form action="" method="post">
+                                {% csrf_token %}
                                 <div class="aa-single-advance-search">
                                     <div class="wrapper">
                                         <div class="search-input">
-                                            <input class="input" type="text" placeholder="Type Your Location">
+                                            <input class="input" type="text" placeholder="Type Your Location" name="location">
                                             <div class="autocom-box">
                                                 <li>Mumbai, Maharashtra</li>
                                                 <li>Gurgaon, Delhi</li>
@@ -288,51 +289,31 @@
                                     </div>
                                 </div>
                                 <div class="aa-single-advance-search">
-                                    <select id="" name="">
-                                        <option selected="" value="0">Category</option>
-                                        <option value="1">Single</option>
-                                        <option value="2">Double Sharing</option>
-                                        <option value="3">Triple Sharing</option>
+                                    <select id="" name="category">
+                                        <option selected="" value="">Category</option>
+                                        <option value="Single">Single</option>
+                                        <option value="Double">Double Sharing</option>
+                                        <option value="Triple">Triple Sharing</option>
                                         <!-- <option value="4">Commercial</option> -->
                                     </select>
                                 </div>
                                 <div class="aa-single-advance-search">
-                                    <select id="" name="">
-                                        <option selected="" value="0">Type</option>
-                                        <option value="1">Girls Only</option>
-                                        <option value="2">Boys Only</option>
-                                        <option value="3">Mixed</option>
+                                    <select id="" name="type1">
+                                        <option selected="" value="">Type</option>
+                                        <option value="Girls Only">Girls Only</option>
+                                        <option value="Boys Only">Boys Only</option>
+                                        <option value="Mixed">Mixed</option>
                                         <!-- <option value="4">AC Without Balcony</option>  -->
                                     </select>
                                 </div>
                                 <div class="aa-single-advance-search">
-                                    <select id="" name="">
-                                        <option selected="" value="0">Type</option>
-                                        <option value="1">AC</option>
-                                        <option value="2">Non-AC</option>
+                                    <select id="" name="type2">
+                                        <option selected="" value="">Type</option>
+                                        <option value="AC">AC</option>
+                                        <option value="Non-AC">Non-AC</option>
                                         <!-- <option value="3">Plot</option>
                       <option value="4">Commercial</option> -->
                                     </select>
-                                </div>
-                                <div class="aa-single-filter-search">
-                                    <span>No.of Rooms</span>
-                                    <span>from</span>
-                                    <span id="skip-value-lower" class="example-val">2</span>
-                                    <span>TO</span>
-                                    <span id="skip-value-upper" class="example-val">7</span>
-                                    <div id="aa-sqrfeet-range"
-                                        class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                                    </div>
-                                </div>
-                                <div class="aa-single-filter-search">
-                                    <span>PRICE(₹)</span>
-                                    <span>FROM</span>
-                                    <span id="skip-value-lower2" class="example-val">200.00</span>
-                                    <span>TO</span>
-                                    <span id="skip-value-upper2" class="example-val">700.00</span>
-                                    <div id="aa-price-range"
-                                        class="noUi-target noUi-ltr noUi-horizontal noUi-background">
-                                    </div>
                                 </div>
                                 <div class="aa-single-advance-search">
                                     <input type="submit" value="Search" class="aa-search-btn">
@@ -345,7 +326,7 @@
                             <div class="media">
                                 <div class="media-left">
                                     <a href="#">
-                                        <img class="media-object" src="img/item/1.jpg" alt="img">
+                                        <img class="media-object" src="/static/img/item/1.jpg" alt="img">
                                     </a>
                                 </div>
                                 <div class="media-body">
@@ -357,7 +338,7 @@
                             <div class="media">
                                 <div class="media-left">
                                     <a href="#">
-                                        <img class="media-object" src="img/item/1.jpg" alt="img">
+                                        <img class="media-object" src="/static/img/item/1.jpg" alt="img">
                                     </a>
                                 </div>
                                 <div class="media-body">
@@ -369,7 +350,7 @@
                             <div class="media">
                                 <div class="media-left">
                                     <a href="#">
-                                        <img class="media-object" src="img/item/1.jpg" alt="img">
+                                        <img class="media-object" src="/static/img/item/1.jpg" alt="img">
                                     </a>
                                 </div>
                                 <div class="media-body">
@@ -444,6 +425,6 @@
 
     <!-- Location Search Bar -->
     <!-- <script src="js/suggestions.js"></script> -->
-    <script src="./static/js/script_loc.js"></script>
+    <script src="/static/js/script_loc.js"></script>
 
 </body>

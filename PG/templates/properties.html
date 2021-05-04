@@ -230,7 +230,8 @@
         </div>
         <!-- Start properties sidebar -->
         <div class="col-md-4">
-          <form action="" method="GET">
+          <form action="" method="POST">
+              {% csrf_token %}
             <aside class="aa-properties-sidebar">
               <!-- Start Single properties sidebar -->
               <div class="aa-properties-single-sidebar">
@@ -249,27 +250,27 @@
                 </div>
                 <div class="aa-single-advance-search">
                   <select id="" name="category">
-                    <option selected="" value="0">Category</option>
-                    <option value="1">Single</option>
-                    <option value="2">Double Sharing</option>
-                    <option value="3">Triple Sharing</option>
+                    <option selected="" value="">Category</option>
+                    <option value="Single">Single</option>
+                    <option value="Double">Double Sharing</option>
+                    <option value="Triple">Triple Sharing</option>
                     <!-- <option value="4">Commercial</option> -->
                   </select>
                 </div>
                 <div class="aa-single-advance-search">
                   <select id="" name="type1">
                     <option selected="" value="0">Type</option>
-                    <option value="1">Girls Only</option>
-                    <option value="2">Boys Only</option>
-                    <option value="3">Mixed</option>
+                    <option value="Girls Only">Girls Only</option>
+                    <option value="Boys Only">Boys Only</option>
+                    <option value="Mixed">Mixed</option>
                     <!-- <option value="4">AC Without Balcony</option>  -->
                   </select>
                 </div>
                 <div class="aa-single-advance-search">
                   <select id="" name="type2">
-                    <option selected="" value="0">Type</option>
-                    <option value="1">AC</option>
-                    <option value="2">Non-AC</option>
+                    <option selected="" value="">Type</option>
+                    <option value="AC">AC</option>
+                    <option value="Non-AC">Non-AC</option>
                     <!-- <option value="3">Plot</option>
                     <option value="4">Commercial</option> -->
                   </select>

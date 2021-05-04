@@ -9,21 +9,27 @@ from PG.models import Users, Properties
 class PG_Views:
 
     def homepage(self,request):
-        # ab = HttpResponse.COOKIES.get('login_status', 0)
-        if request.method == 'GET':
-            location = request.GET.get('location','')
-            type1 = request.GET.get('type1','')
-            category = request.GET.get('category','')
-            type2 = request.GET.get('type2','')
+        search = Properties.objects.all()
+        if request.method == 'POST':
+            location = request.POST.get('location', '')
+            type1 = request.POST.get('type1', '')
+            category = request.POST.get('category', '')
+            type2 = request.POST.get('type2', '')
             if location != '':
-                search = Properties.objects.all()
+                search1 = search.filter(Property_Location_City=location)
+                print(search1)
                 if type1 != '':
-                    search = search.filter(Type1=type1)
+                    search1 = search1.filter(Type1=type1)
+                    print(search1)
                 if type2 != '':
-                    search = search.filter(Type2=type2)
+                    search1 = search1.filter(Type2=type2)
+                    print(search1)
                 if category != '':
-                    search = search.filter(Category=category)
-                return redirect('/properties',{'search':search})
+                    search1 = search1.filter(Category=category)
+                    print(search1)
+                return render(request, './properties.html', {'search': search1})
+            else:
+                return redirect('/')
         return render(request,'./index.html')
 
     def loginpage(self,request):
@@ -56,27 +62,54 @@ class PG_Views:
         return render(request,'./signup.html')
 
     def properties(self,request):
-        if request.method == 'GET':
-            location = request.GET.get('location', '')
-            type1 = request.GET.get('type1', '')
-            category = request.GET.get('category', '')
-            type2 = request.GET.get('type2', '')
+        search = Properties.objects.all()
+        if request.method == 'POST':
+            location = request.POST.get('location', '')
+            type1 = request.POST.get('type1', '')
+            category = request.POST.get('category', '')
+            type2 = request.POST.get('type2', '')
             if location != '':
-                search = Properties.objects.all()
+                search1 = search.filter(Property_Location_City=location)
+                print(search1)
                 if type1 != '':
-                    search = search.filter(Type1=type1)
+                    search1 = search1.filter(Type1=type1)
+                    print(search1)
                 if type2 != '':
-                    search = search.filter(Type2=type2)
+                    search1 = search1.filter(Type2=type2)
+                    print(search1)
                 if category != '':
-                    search = search.filter(Category=category)
-                return redirect('/properties', {'search': search})
+                    search1 = search1.filter(Category=category)
+                    print(search1)
+                return render(request, './properties.html', {'search': search1})
         return render(request,'./properties.html')
 
     def properties_details(self,request):
+        search = Properties.objects.all()
+        if request.method == 'POST':
+            location = request.POST.get('location', '')
+            type1 = request.POST.get('type1', '')
+            category = request.POST.get('category', '')
+            type2 = request.POST.get('type2', '')
+            if location != '':
+                search1 = search.filter(Property_Location_City=location)
+                print(search1)
+                if type1 != '':
+                    search1 = search1.filter(Type1=type1)
+                    print(search1)
+                if type2 != '':
+                    search1 = search1.filter(Type2=type2)
+                    print(search1)
+                if category != '':
+                    search1 = search1.filter(Category=category)
+                    print(search1)
+                return render(request, './properties.html', {'search': search1})
         return render(request,'./properties_details.html')
 
     def contactspage(self,request):
-        return  render(request,'./contact.html')
+        return render(request,'./contact.html')
 
     def forgotpass(self,request):
         return render(request,'./forgotpass.html')
+
+    # def profile(self,request):
+    #     return render(request,'./profile.html')
