@@ -132,7 +132,28 @@
             </li>
 
             <li>
-              <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_GtIhlKaB55jbxR" async> </script> </form>
+                <form method="post" action="/properties/">
+    {% csrf_token %}
+<script
+    src="https://checkout.razorpay.com/v1/checkout.js"
+    data-key="rzp_test_fz23OCSJPPKLV5"
+    data-amount="{{ amount }}"
+    data-currency="{{ currency }}"
+    data-order_id="{{ start.id }}"
+    data-buttontext="Pay with Razorpay"
+    data-name="PG"
+    data-description="PG Accomodation Provider"
+    data-image="https://www.vectorstock.com/royalty-free-vector/whatsapp-logo-icon-vector-27990484"
+    data-prefill.name="Ashwini Mohapatra"
+    data-prefill.contact="7427829367"
+    data-prefill.email="ashwini152066@gmail.com"
+    data-theme.color="#F37254"
+></script>
+    <input type="hidden" custom="Hidden Element" name="hidden">
+
+    </form>
+
+{#              <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_GtIhlKaB55jbxR" async> </script> </form>#}
             </li>
 
           </ul>

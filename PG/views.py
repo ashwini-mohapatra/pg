@@ -1,15 +1,17 @@
 from django.http import response, HttpResponse
 from django.shortcuts import render, redirect
 
-
 # Create your views here.
 from PG.models import Users, Properties
+from PG.payment import Payment
 
 
 class PG_Views:
 
-    def homepage(self,request):
+    def homepage(self, request):
         search = Properties.objects.all()
+        payment = Payment()
+        payment.init_payment(5)
         if request.method == 'POST':
             location = request.POST.get('location', '')
             type1 = request.POST.get('type1', '')
@@ -30,22 +32,22 @@ class PG_Views:
                 return render(request, './properties.html', {'search': search1})
             else:
                 return redirect('/')
-        return render(request,'./index.html')
+        return render(request, './index.html', {'amount': 500, 'currency': 'INR'})
 
-    def loginpage(self,request):
+    def loginpage(self, request):
         if request.method == 'POST':
             var1 = request.POST.get('email', '')
             var2 = request.POST.get('password', '')
-            objects = Users.objects.all().filter(email_id=var1 ,password=var2)
+            objects = Users.objects.all().filter(email_id=var1, password=var2)
             if objects is None:
                 # HttpResponse.set_cookies('login_status', 0)
                 return redirect('/login')
             else:
                 # HttpResponse.set_cookies('login_status', 1)
                 return redirect('/')
-        return render(request,'./login.html')
+        return render(request, './login.html')
 
-    def signuppage(self,request):
+    def signuppage(self, request):
         if request.method == 'POST':
             var0 = request.POST.get('name', '')
             # var1 = request.POST.get('username', '')
@@ -59,9 +61,9 @@ class PG_Views:
             else:
                 # HttpResponse.set_cookies('login_status', 0)
                 return redirect('/signup')
-        return render(request,'./signup.html')
+        return render(request, './signup.html')
 
-    def properties(self,request):
+    def properties(self, request):
         search = Properties.objects.all()
         if request.method == 'POST':
             location = request.POST.get('location', '')
@@ -81,9 +83,9 @@ class PG_Views:
                     search1 = search1.filter(Category=category)
                     print(search1)
                 return render(request, './properties.html', {'search': search1})
-        return render(request,'./properties.html')
+        return render(request, './properties.html')
 
-    def properties_details(self,request):
+    def properties_details(self, request):
         search = Properties.objects.all()
         if request.method == 'POST':
             location = request.POST.get('location', '')
@@ -103,13 +105,13 @@ class PG_Views:
                     search1 = search1.filter(Category=category)
                     print(search1)
                 return render(request, './properties.html', {'search': search1})
-        return render(request,'./properties_details.html')
+        return render(request, './properties_details.html')
 
-    def contactspage(self,request):
-        return render(request,'./contact.html')
+    def contactspage(self, request):
+        return render(request, './contact.html')
 
-    def forgotpass(self,request):
-        return render(request,'./forgotpass.html')
+    def forgotpass(self, request):
+        return render(request, './forgotpass.html')
 
     # def profile(self,request):
     #     return render(request,'./profile.html')
