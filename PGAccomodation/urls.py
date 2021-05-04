@@ -24,5 +24,6 @@ urlpatterns = [
     path('properties_details/', include('PG.urls'), name='property_details'),
     path('contact/', include('PG.urls'), name='contact'),
     path('forgotpass/', include('PG.urls'), name='forgotpass'),
+    # path('profile/', include('PG.urls'), name='profile'),
     path('admin/', admin.site.urls),
 ]
